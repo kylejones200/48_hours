@@ -24,8 +24,8 @@ I create detailed 48-hour city guides that help travelers eat well, see more, an
 
 Ready to collaborate? I'd love to hear about your project.
 
-**Email**: [your-email@example.com]  
-**Social**: [Your social media handles]
+**Email**: [kyle@kyletjones.com]  
+**Social**: [Kyle Jones on LinkedIn](https://www.linkedin.com/in/kyle-t-jones/)
 
 ---
 

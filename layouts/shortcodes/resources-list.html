@@ -1,0 +1,141 @@
+{{ $resources := where site.RegularPages "Section" "posts" }}
+{{ $resources = where $resources ".Params.categories" "intersect" (slice "helpful-resources") }}
+
+{{ if $resources }}
+<div class="resources-list">
+  {{ range $resources.ByTitle }}
+    <article class="resource-item">
+      {{ if .Params.cover.image }}
+        <div class="resource-image">
+          <img src="{{ .RelPermalink }}{{ .Params.cover.image }}" alt="{{ .Params.cover.alt | default .Title }}" loading="lazy">
+        </div>
+      {{ end }}
+      <div class="resource-content">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p class="resource-summary">{{ .Summary }}</p>
+        <div class="resource-meta">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{ if .Params.tags }}
+            <div class="resource-tags">
+              {{ range .Params.tags }}
+                <span class="tag">{{ . }}</span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </article>
+  {{ end }}
+</div>
+{{ else }}
+<div class="no-resources">
+  <p>More travel resources coming soon! Check back for helpful guides, tips, and tools.</p>
+</div>
+{{ end }}
+
+<style>
+.resources-list {
+  margin: 2rem 0;
+}
+
+.resource-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resource-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resource-image {
+  flex-shrink: 0;
+  width: 120px;
+}
+
+.resource-image img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.resource-content {
+  flex: 1;
+}
+
+.resource-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.resource-content h3 a {
+  text-decoration: none;
+  color: var(--primary);
+}
+
+.resource-content h3 a:hover {
+  text-decoration: underline;
+}
+
+.resource-summary {
+  color: var(--secondary);
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.resource-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--secondary);
+}
+
+.resource-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--theme);
+  color: var(--entry);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.7rem;
+}
+
+.no-resources {
+  text-align: center;
+  padding: 2rem;
+  color: var(--secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .resource-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .resource-image {
+    width: 100%;
+  }
+  
+  .resource-image img {
+    height: 120px;
+  }
+  
+  .resource-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
+</style>

@@ -1,6 +1,6 @@
 baseURL = "https://kylejones200.github.io/48_hours/"
 languageCode = "en-us"
-title = "48 Hours"
+title = "48 Hours – City Guides for Fast Trips"
 theme = "github.com/adityatelange/hugo-PaperMod"
  
 [pagination]
@@ -28,7 +28,7 @@ showPostNavLinks = true
 disableHLJS = true
 
 [params.homeInfoParams]
-Title = "48 Hours"
+Title = "48 Hours – City Guides for Fast Trips"
 Content = "Short, sharp city guides. Eat well. See more. Move fast."
 
 [menu]
@@ -45,6 +45,10 @@ Content = "Short, sharp city guides. Eat well. See more. Move fast."
   url  = "/about/"
   weight = 3
   [[menu.main]]
+  name = "Resources"
+  url  = "/resources/"
+  weight = 4
+  [[menu.main]]
   name = "Work With Me"
   url  = "/work/"
-  weight = 4
+  weight = 5
