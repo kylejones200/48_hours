@@ -1,0 +1,50 @@
+baseURL = "https://<your-username>.github.io/"
+languageCode = "en-us"
+title = "48 Hours"
+theme = "github.com/adityatelange/hugo-PaperMod"
+ 
+[pagination]
+  pagerSize = 12
+enableRobotsTXT = true
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
+
+[params]
+env = "production"
+description = "City guides in 48 hours."
+defaultTheme = "auto"
+showReadingTime = false
+showBreadCrumbs = true
+showPostNavLinks = true
+
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+[params.assets]
+disableHLJS = true
+
+[params.homeInfoParams]
+Title = "48 Hours"
+Content = "Short, sharp city guides. Eat well. See more. Move fast."
+
+[menu]
+  [[menu.main]]
+  name = "Home"
+  url  = "/"
+  weight = 1
+  [[menu.main]]
+  name = "Cities"
+  url  = "/cities/"
+  weight = 2
+  [[menu.main]]
+  name = "About"
+  url  = "/about/"
+  weight = 3
+  [[menu.main]]
+  name = "Work With Me"
+  url  = "/work/"
+  weight = 4

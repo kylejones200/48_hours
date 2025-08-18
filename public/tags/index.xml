@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on 48 Hours</title>
+    <link>http://localhost:1313/tags/</link>
+    <description>Recent content in Tags on 48 Hours</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 13:32:03 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Austin</title>
+      <link>http://localhost:1313/tags/austin/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/austin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bentonville</title>
+      <link>http://localhost:1313/tags/bentonville/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/bentonville/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chicago</title>
+      <link>http://localhost:1313/tags/chicago/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/chicago/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Denver</title>
+      <link>http://localhost:1313/tags/denver/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/denver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Eureka-Springs</title>
+      <link>http://localhost:1313/tags/eureka-springs/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/eureka-springs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Glenwood-Springs</title>
+      <link>http://localhost:1313/tags/glenwood-springs/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/glenwood-springs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gruene</title>
+      <link>http://localhost:1313/tags/gruene/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/gruene/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Houston</title>
+      <link>http://localhost:1313/tags/houston/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/houston/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memphis</title>
+      <link>http://localhost:1313/tags/memphis/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/memphis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oklahoma-City</title>
+      <link>http://localhost:1313/tags/oklahoma-city/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/oklahoma-city/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sunlight</title>
+      <link>http://localhost:1313/tags/sunlight/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/sunlight/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tulsa</title>
+      <link>http://localhost:1313/tags/tulsa/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/tulsa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TX</title>
+      <link>http://localhost:1313/tags/tx/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/tags/tx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>48-Hours</title>
+      <link>http://localhost:1313/tags/48-hours/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/48-hours/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Atlanta</title>
+      <link>http://localhost:1313/tags/atlanta/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/atlanta/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

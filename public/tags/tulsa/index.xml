@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tulsa on 48 Hours</title>
+    <link>http://localhost:1313/tags/tulsa/</link>
+    <description>Recent content in Tulsa on 48 Hours</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 13:32:03 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tulsa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>48 Hours in Tulsa, OK</title>
+      <link>http://localhost:1313/posts/tulsa_48/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/posts/tulsa_48/</guid>
+      <description>A weekend guide to Tulsa’s hotels, food, coffee, and family fun</description>
+    </item>
+  </channel>
+</rss>
