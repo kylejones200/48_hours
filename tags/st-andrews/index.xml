@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>St-Andrews on 48 Hours</title>
+    <link>http://localhost:1313/tags/st-andrews/</link>
+    <description>Recent content in St-Andrews on 48 Hours</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 13:32:03 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/st-andrews/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>48 Hours in St Andrews</title>
+      <link>http://localhost:1313/posts/scotland/st_andrews/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/posts/scotland/st_andrews/</guid>
+      <description>St Andrews is more than golf. The medieval streets, sea views, and university traditions shape a town that feels both historic and alive. Two days here balance history, coastal walks, and the slow pace of a seaside town.</description>
+    </item>
+  </channel>
+</rss>

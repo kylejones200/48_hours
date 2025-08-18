@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Glasgow on 48 Hours</title>
+    <link>http://localhost:1313/tags/glasgow/</link>
+    <description>Recent content in Glasgow on 48 Hours</description>
+    <generator>Hugo -- 0.148.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Aug 2025 13:32:03 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/glasgow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>48 Hours in Glasgow</title>
+      <link>http://localhost:1313/posts/scotland/glasgow/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/posts/scotland/glasgow/</guid>
+      <description>Glasgow has grit, warmth, and an edge. Once an industrial hub, it now thrives on music, design, and nightlife. A weekend gives you a taste of its art, history, and friendly energy.</description>
+    </item>
+  </channel>
+</rss>
