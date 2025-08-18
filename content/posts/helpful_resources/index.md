@@ -7,7 +7,7 @@ tags: [travel-journal]
 categories: [helpful-resources]
 cover:
   image: "cover.jpg"
-  alt: "A Child’s Travel Reflection Journal"
+  alt: "Helpful Travel Resources"
   relative: true
 ---
 
