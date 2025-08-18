@@ -1,4 +1,4 @@
-baseURL = "https://<your-username>.github.io/"
+baseURL = "https://kylejones200.github.io/48_hours/"
 languageCode = "en-us"
 title = "48 Hours"
 theme = "github.com/adityatelange/hugo-PaperMod"
