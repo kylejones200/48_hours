@@ -1,37 +1,43 @@
 ---
+
 title: "48 Hours in Atlanta"
 date: 2025-08-16
 summary: "Barbecue, whale sharks, Olympic grounds, and a downtown stay."
-tags: ["atlanta","48-hours"]
-categories: ["cities"]
+tags: \["atlanta","48-hours"]
+categories: \["cities"]
 cover:
-  image: "PXL_20250806_141418551.jpg"
-  alt: "Everything in Georgia is Peaches"
-  relative: true
+  image: "PXL\_20250806\_141418551.jpg"
+  alt: "Everything in Georgia is Peaches"
+  relative: true
+
 ---
 
-Atlanta makes a quick trip worthwhile. In two days you can eat barbecue, explore one of the world’s largest aquariums, walk Olympic grounds, and stay in a hotel that puts you in the middle of it all.
+Atlanta rewards a short visit. In two days you can taste barbecue, watch whale sharks glide past, stand on Olympic grounds, and stay in a hotel at the center of it all.
 
 ## Where to Stay
-Check into the Glenn Hotel downtown. Drop your bags, take a breath, and walk the neighborhood. The lobby sets the tone—warm light, modern art, a rooftop bar above. Once you’re settled, head to Brother’s BBQ. Order a plate of ribs or brisket with sides of greens and mac and cheese. The smoke and spice welcome you to the city. After dinner, return to the hotel and stroll around the nearby streets. Downtown hums at night with lights and people.
+
+Book a room at the Glenn Hotel downtown. Drop your bags and step outside. The lobby glows with warm light and modern art, and a rooftop bar waits above. From there, walk to Brother’s BBQ. Order ribs or brisket with greens and mac and cheese. The smoke hits first, then the spice, and the meal feels like a welcome. After dinner, wander the streets near the hotel. Downtown glitters at night, full of noise and light.
 
 **Brother’s BBQ**
-Brother’s BBQ feels local and real. You order ribs, brisket, or pulled pork. The meat is smoky and tender. Sides like mac and cheese and collard greens balance the plate. The mood is casual, the kind that makes you linger.
+Brother’s BBQ feels like a local hangout. The menu is simple—ribs, brisket, pulled pork. The meat is tender and smoky, the sides hearty. The place has an easy rhythm that makes you stay longer than planned.
 
 **Georgia Aquarium**
-The Georgia Aquarium is one of the largest in the world. Whale sharks glide in its massive tank. Rays sweep past glass tunnels. Families cluster at dolphin and sea lion shows. The sheer scale makes it less a quick stop and more an all-day event.
+The Georgia Aquarium ranks among the largest in the world. Whale sharks circle in a massive tank. Rays pass overhead in glass tunnels. Families crowd into dolphin and sea lion shows. The scale of the place makes it less a stop and more a half-day journey.
 
 **Centennial Olympic Park**
-Olympic Park marks Atlanta’s role as host city in 1996. Its fountains shoot water in time to music. Lawns spread across 22 acres, framed by downtown towers. Locals stroll, kids run through the splash pads, and events fill the space in summer. It’s a landmark that blends history with leisure.
+Centennial Olympic Park keeps the memory of 1996 alive. Its fountains leap in time with music. Wide lawns stretch across 22 acres, framed by downtown towers. Kids run through splash pads, couples stroll, and summer events fill the open space. It’s part history, part everyday park.
 
 **The Glenn Hotel**
-The Glenn Hotel anchors a stay downtown. The lobby has style, with art on the walls and warm lighting. Rooms are clean, modern, and close to major sights. Its rooftop bar looks out over the city. You walk from the hotel to the park, the aquarium, and other attractions.
+The Glenn Hotel gives you a base close to everything. Rooms are clean and bright, the lobby warm with light and art. From the rooftop bar you look across the city. Walk out the front door and you reach the aquarium and Olympic Park within minutes.
 
 ## Day 2: Aquarium and Olympic Park
-Wake up near the action. The Georgia Aquarium is a short walk from the hotel. Plan a half-day here. The whale sharks circle in the Ocean Voyager tank, rays glide overhead in glass tunnels, and the dolphin and sea lion shows keep crowds cheering. By afternoon, step into Centennial Olympic Park. Its fountains pulse in choreographed bursts. Families picnic, kids splash, and the grounds carry the memory of the 1996 Games. Sit on the grass and watch the city move around you. Dinner can circle back to the Glenn rooftop, where you see the skyline shift from daylight to night.
+
+Wake up near the action. Walk to the Georgia Aquarium and spend the morning. Watch whale sharks drift past, rays sweep overhead, and crowds cheer at the shows. By afternoon, head into Olympic Park. Sit near the fountains, stretch out on the grass, and watch the city move around you. End the night back at the Glenn rooftop, where the skyline shifts from gold to dark blue.
 
 ## Day 3: Slow Morning and Departure
-Take your time. The Glenn puts you close to coffee shops and small breakfast spots. Wander back through Olympic Park if the weather is clear, or find a quiet corner to reflect on the trip. Check out by midday and leave with the sense that Atlanta packs food, spectacle, and history into even the shortest visit.
+
+Start easy. Grab coffee nearby or a quick breakfast. If the weather holds, circle back through Olympic Park. By midday it’s time to check out. You leave with the sense that Atlanta gives plenty in a short time.
 
 ## Why 48 Hours Works
-Atlanta fits a short visit well. Food, culture, and history sit close together downtown. You can eat local barbecue, watch sea life in motion, walk Olympic grounds, and rest in a hotel that connects it all. Two days leave you full and ready to return.
+
+Atlanta is compact and full. Food, history, and spectacle all sit close downtown. Two days give you enough to feel the city and enough reason to come back.

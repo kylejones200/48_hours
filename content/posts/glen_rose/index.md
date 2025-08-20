@@ -6,13 +6,13 @@ draft: false
 tags: [glen-rose]
 categories: [48-hours]
 cover:
-  image: "cover.jpg"
+  image: "PXL_20201010_151523466.PORTRAIT.jpg"
   alt: "48 Hours in Glen Rose, TX"
   relative: true
 ---
 
 
-Glen Rose calls itself the “Dinosaur Capital of Texas,” and for good reason. Prehistoric tracks fill the riverbeds, life-sized dinosaur statues guard a roadside park, and a wildlife safari sprawls across the hills. Add in small-town charm, big limestone rocks, and local museums, and you have a weekend that’s both adventurous and easygoing.  
+Glen Rose calls itself the "Dinosaur Capital of Texas," and for good reason. Prehistoric tracks fill the riverbeds, life-sized dinosaur statues guard a roadside park, and a wildlife safari sprawls across the hills. Add in small-town charm, big limestone rocks, and local museums, and you have a weekend that’s both adventurous and easygoing.  
 
 
 

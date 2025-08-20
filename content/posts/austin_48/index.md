@@ -1,38 +1,40 @@
 ---
+
 title: "48 Hours in Austin, TX"
 date: 2025-08-18T13:32:03-05:00
 summary: "A weekend guide to Austin’s food, music, and springs"
 draft: false
-tags: [austin]
-categories: [48-hours]
+tags: \[austin]
+categories: \[48-hours]
 cover:
-  image: "cover.jpg"
-  alt: "48 Hours in Austin, TX"
-  relative: true
+  image: "cover.jpg"
+  alt: "48 Hours in Austin, TX"
+  relative: true
+
 ---
 
-Austin runs on barbecue, live music, and spring water. In two days you can eat brisket, swim in Barton Springs, shop South Congress, and end your nights under string lights with a band playing nearby.
+Austin runs on barbecue, live music, and cold spring water. In two days you can eat brisket, swim in Barton Springs, shop South Congress, and end nights under string lights with a band playing close by.
 
 ## Day 1 Evening: Arrival, Dinner, and Sixth Street
 
-Check in at the **Westin Austin Downtown**, a short walk from Sixth Street. Rooms are modern with floor-to-ceiling windows, and the rooftop pool looks over the skyline. For dinner, step next door to **Moonshine Patio Bar & Grill**. Southern comfort food and cocktails land in a space that feels historic but casual. Afterward, head to Sixth Street. Bars pack the blocks, bands play everything from blues to rock, and the street itself feels like a festival.
+Stay at the Westin Austin Downtown, a block from Sixth Street. Rooms have tall windows and a rooftop pool with city views. For dinner, walk to Moonshine Patio Bar & Grill. Plates of Southern comfort food arrive in a space that feels warm and historic. Afterward, step into Sixth Street. Bars fill each block, bands play blues and rock, and the street itself turns into one long festival.
 
 ## Day 2 Morning: Barbecue and South Congress
 
-Start with brisket at **Franklin Barbecue** if you’re willing to line up, or skip the wait at **Micklethwait** or **Cooper’s**. After lunch, wander South Congress. Murals, vintage shops, and coffee houses line the strip, making it the city’s best street for an afternoon walk.
+Line up at Franklin Barbecue if you want the city’s best brisket, or cut the wait at Micklethwait or Cooper’s. The smoke and spice carry the meal. Afterward, spend the afternoon on South Congress. Murals brighten the walls, vintage shops spill onto sidewalks, and coffee houses keep the street alive.
 
-## Day 2 Evening: Fine Dining and Live Music
+## Day 2 Evening: Dinner and Music
 
-Return downtown for dinner. Choose **Eddie V’s** for steak and seafood or **Fixe** for updated Southern dishes. Both balance polish with comfort. Afterward, dive back into Sixth Street or find a smaller bar with acoustic sets. Music pours into the night, and you end the day in Austin’s rhythm.
+Come back downtown for dinner. Eddie V’s serves steak and seafood, Fixe leans into Southern plates with polish. Both give you comfort with a bit of shine. When the meal ends, find music again. Sixth Street roars, but smaller bars nearby keep things softer. Either way, you end the night in Austin’s rhythm.
 
 ## Day 3 Morning: Springs and Parks
 
-Spend the morning at **Barton Springs Pool**. The water is cold, clear, and ringed with grass for lounging. Walk **Zilker Park** afterward, or rent a kayak on Lady Bird Lake for time on the water.
+Start at Barton Springs Pool. The water stays cold year-round, clear enough to see the bottom. Grass lines the edge, perfect for drying off in the sun. From there, walk into Zilker Park or rent a kayak on Lady Bird Lake. Both keep you outside, both feel like Austin.
 
 ## Day 3 Afternoon: Lunch and Rainey Street
 
-Stop at **Neighborhood Sushi** for a bright, modern lunch. Then head to **Rainey Street**, where old houses turned into bars fill with people. Food trucks serve tacos and sliders, string lights hang across patios, and live music drifts from porches. It’s a laid-back close to the weekend before heading back downtown to check out.
+Lunch at Neighborhood Sushi feels light and modern. Then spend the afternoon on Rainey Street. Old houses turned into bars spill onto porches. Food trucks line the yards with tacos and sliders. String lights glow above, and music drifts across patios. It’s an easy end to the weekend before you head back downtown to check out.
 
 ## Why It Works for a Weekend
 
-The Westin anchors the stay. Moonshine, Eddie V’s, Fixe, and Neighborhood Sushi shape the meals. Barton Springs and South Congress show Austin by day. Sixth Street and Rainey Street carry it by night. In 48 hours you get Austin’s balance: smoky food, cold water, and music that never quits.
+The Westin is a good base. Moonshine, Eddie V’s, Fixe, and Neighborhood Sushi cover the meals. Barton Springs and South Congress show the city by day. Sixth Street and Rainey Street keep it moving at night. In 48 hours you taste barbecue, swim cold water, and hear music that never stops.
