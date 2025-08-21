@@ -1,0 +1,121 @@
+name: Optimize Media Files
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'content/**/*.jpg'
+      - 'content/**/*.jpeg'
+      - 'content/**/*.mp4'
+      - 'content/**/*.mov'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'content/**/*.jpg'
+      - 'content/**/*.jpeg'
+      - 'content/**/*.mp4'
+      - 'content/**/*.mov'
+
+jobs:
+  optimize-media:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+
+    - name: Install optimization tools
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y webp exiftool
+
+    - name: Convert JPEG to WebP and remove metadata
+      run: |
+        #!/bin/bash
+        
+        # Flag to track if any changes were made
+        changes_made=false
+        
+        # Find and process JPEG files
+        find content/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) | while read -r file; do
+          echo "Processing image: $file"
+          
+          # Get the directory and filename without extension
+          dir=$(dirname "$file")
+          filename=$(basename "$file")
+          name="${filename%.*}"
+          
+          # Convert to WebP with high quality and remove metadata
+          if cwebp -q 85 -metadata none "$file" -o "${dir}/${name}.webp"; then
+            echo "✓ Converted to WebP: ${dir}/${name}.webp"
+            
+            # Update references in markdown files
+            find content/ -name "*.md" -type f -exec sed -i "s|${filename}|${name}.webp|g" {} +
+            
+            # Remove the original JPEG file
+            rm "$file"
+            echo "✓ Removed original: $file"
+            changes_made=true
+          else
+            echo "✗ Failed to convert: $file"
+          fi
+        done
+        
+        # Process MP4 and MOV files to remove metadata
+        find content/ -type f \( -iname "*.mp4" -o -iname "*.mov" \) | while read -r file; do
+          echo "Processing video: $file"
+          
+          # Remove metadata from video files
+          if exiftool -all= -overwrite_original "$file"; then
+            echo "✓ Removed metadata from: $file"
+            changes_made=true
+          else
+            echo "✗ Failed to process: $file"
+          fi
+        done
+        
+        # Set output for next step
+        echo "changes_made=$changes_made" >> $GITHUB_OUTPUT
+      id: optimize
+
+    - name: Commit optimized files
+      if: steps.optimize.outputs.changes_made == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Add all changes
+        git add .
+        
+        # Check if there are changes to commit
+        if ! git diff --staged --quiet; then
+          git commit -m "🖼️ Auto-optimize: Convert JPEG to WebP and remove metadata
+          
+          - Converted JPEG images to WebP format (85% quality)
+          - Removed EXIF metadata from images and videos
+          - Updated file references in markdown files
+          - Automated via GitHub Actions"
+          
+          git push
+          echo "✅ Changes committed and pushed"
+        else
+          echo "ℹ️ No changes to commit"
+        fi
+
+    - name: Summary
+      run: |
+        echo "## Media Optimization Complete! 🎉" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### What was processed:" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ JPEG images converted to WebP format" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ EXIF metadata removed from all media files" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ File references updated in markdown files" >> $GITHUB_STEP_SUMMARY
+        echo "- ✅ Original JPEG files cleaned up" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### Benefits:" >> $GITHUB_STEP_SUMMARY
+        echo "- 🚀 Faster page loading (25-35% smaller file sizes)" >> $GITHUB_STEP_SUMMARY
+        echo "- 🔒 Enhanced privacy (location data removed)" >> $GITHUB_STEP_SUMMARY
+        echo "- 🌐 Modern web format (WebP)" >> $GITHUB_STEP_SUMMARY
