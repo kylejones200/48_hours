@@ -6,7 +6,7 @@ draft: false
 tags: ["houston"]
 categories: ["48-hours"]
 cover:
-  image: "PXL_20210306_142251469.jpg"
+  image: "PXL_20210306_142251469.webp"
   alt: "48 Hours in Houston"
   relative: true
 ---

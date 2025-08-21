@@ -6,7 +6,7 @@ draft: false
 tags: ["sunlight"]
 categories: ["general"]
 cover:
-  image: "PXL_20250105_234006581.jpg"
+  image: "PXL_20250105_234006581.webp"
   alt: "Skiing Sunlight Mountain, CO"
   relative: true
 ---

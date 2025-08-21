@@ -6,7 +6,7 @@ draft: false
 tags: ["guthrie"]
 categories: ["48-hours"]
 cover:
-  image: "content/posts/guthrie/PXL_20220820_152948224.jpg"
+  image: "PXL_20220820_152948224.webp"
   alt: "24 Hours in Guthrie, Oklahoma"
   relative: true
 ---
@@ -23,7 +23,7 @@ Begin your day at the **Oklahoma Territorial Museum**. The museum explains how G
 
 Next, head to the **Oklahoma Sports Hall of Fame**. The Hall celebrates athletes from across the state, from baseball legends to Olympians. Displays cover more than victories. They show the communities, schools, and families behind the athletes. It makes the visit feel personal rather than just a list of records.
 
-![Oklahoma Sports Hall of Fame](content/posts/guthrie/PXL_20220820_152948224.jpg)
+![Oklahoma Sports Hall of Fame](PXL_20220820_152948224.webp)
 
 ## Afternoon: Oklahoma Frontier Drugstore Museum and Apothecary Garden
 

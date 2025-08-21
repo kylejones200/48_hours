@@ -1,51 +1,57 @@
-# Travel — Hugo + PaperMod
+# 48 Hours Travel Guides
 
-This repository is a Hugo static site configured to use the [PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme via **Hugo Modules**.
+Detailed city guides designed to help you eat well, see more, and move fast. Each guide covers the essential experiences you can fit into a weekend, with practical tips for efficient travel.
 
-## Prerequisites
-- Install Hugo (extended):
-  - macOS: `brew install hugo`
-- (Recommended) Install Go (for Hugo Modules):
-  - macOS: `brew install go`
+## 🌍 Featured Destinations
 
-## Run locally
+### United States
+- **Atlanta** - Barbecue, whale sharks, Olympic grounds, and downtown stays
+- **Chicago** - Art Institute, architecture tours, Museum of Science and Industry
+- **Houston** - Museum District, NASA Space Center, and Texas barbecue
+- **Memphis** - Graceland, riverboat rides, and music history
+- **Glen Rose, TX** - Dinosaur tracks, wildlife safaris, and small-town charm
+
+### Europe
+- **Edinburgh** - Castle views, Royal Mile, and Scottish culture
+- **Glasgow** - Industrial heritage turned creative hub
+- **St Andrews** - Historic university town and coastal walks
+
+## 🗺️ Interactive Maps
+
+Each city guide includes interactive maps with:
+- **Color-coded locations** (hotels, restaurants, attractions)
+- **Day-by-day routes** with walking directions
+- **Practical details** for each stop
+
+## 📝 Travel Resources
+
+- **Kids Travel Journal** - Reflection prompts for young travelers
+- **Packing Lists** - Organized by destination type
+- **Photography Tips** - Better travel photos
+
+## 🚀 Features
+
+- **Fast loading** - Optimized images and modern web formats
+- **Mobile-friendly** - Responsive design for on-the-go planning
+- **Privacy-focused** - No tracking, no ads
+- **Offline-ready** - Works without internet once loaded
+
+## 💼 Work With Me
+
+Interested in collaboration? I create custom travel content, city guides, and consulting services. [Get in touch](/work/) to discuss your project.
+
+---
+
+## Technical Details
+
+Built with Hugo static site generator for fast, secure delivery. Images are automatically optimized to WebP format with metadata removal for privacy and performance.
+
+**Local development:**
 ```bash
-# from the project root
 hugo server -D
 ```
-Then open the URL printed by Hugo (usually http://localhost:1313).
 
-On first run, Hugo will download the PaperMod theme automatically via modules.
-
-## Create content
+**Deploy:**
 ```bash
-hugo new posts/my-first-post.md
+hugo --minify
 ```
-Edit front matter and set `draft: false` to publish.
-
-## Project structure
-- `config.yaml` — site configuration with PaperMod module import and params
-- `content/` — your pages and posts
-- `archetypes/` — default front matter for new content
-- `static/` — static assets served as-is (optional)
-- `assets/` — pipeline assets (SCSS/JS) (optional)
-
-## Deploy
-- Build static files:
-  ```bash
-  hugo --minify
-  ```
-  Output goes to `public/` which you can deploy to Netlify, GitHub Pages, Cloudflare Pages, etc.
-
-### Optional: Pin the PaperMod version
-To pin a specific PaperMod version:
-```bash
-hugo mod get github.com/adityatelange/hugo-PaperMod@vX.Y.Z
-hugo mod tidy
-```
-
-If you prefer Git submodule instead of modules, remove the `module.imports` section in `config.yaml`, then add the theme:
-```bash
-git submodule add https://github.com/adityatelange/hugo-PaperMod themes/PaperMod
-```
-And set `theme: "PaperMod"` in `config.yaml`.

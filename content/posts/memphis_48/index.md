@@ -6,7 +6,7 @@ draft: false
 tags: ["memphis"]
 categories: ["48-hours"]
 cover:
-  image: "PXL_20241011_161448577.jpg"
+  image: "PXL_20241011_161448577.webp"
   alt: "48 Hours in Memphis"
   relative: true
 ---
@@ -34,7 +34,7 @@ Memphis offers history, culture, and tunes. You can live among legends here. We 
 **Graceland**
 Elvis Presley’s home is a singular draw. The chapel, the Jungle Room, the car collection—it all feels personal. It anchors Memphis in music history.
 
-![Graceland](/images/memphis/graceland.jpg)
+![Graceland](graceland.webp)
 
 **MoSH and the Star Show**
 The Pink Palace Museum houses a history and science blend. The AutoZone Dome at the Sharpe Planetarium lets you float in stars while the laser lights pulse above. Science meets theater in a small, round room. That show stays with you. ([MoSH](https://moshmemphis.com/explore/planetarium/)).

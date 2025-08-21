@@ -6,7 +6,7 @@ draft: false
 tags: ["chicago"]
 categories: ["48-hours"]
 cover:
-  image: "PXL_20230315_004451429.jpg"
+  image: "PXL_20230315_004451429.webp"
   alt: "48 Hours in Chicago, IL"
   relative: true
 ---

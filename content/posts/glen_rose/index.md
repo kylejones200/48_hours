@@ -6,7 +6,7 @@ draft: false
 tags: ["glen-rose"]
 categories: ["48-hours"]
 cover:
-  image: "PXL_20201010_151523466.PORTRAIT.jpg"
+  image: "PXL_20201010_151523466.PORTRAIT.webp"
   alt: "48 Hours in Glen Rose, TX"
   relative: true
 ---

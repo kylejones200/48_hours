@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><script src="/48_hours/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=48_hours/livereload" data-no-instant defer></script>
+<head>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -827,21 +827,21 @@
   "@type": "TravelGuide",
   "name": "48 Hours in Austin, TX",
   "description": "A weekend guide to Austin\u0026rsquo;s food, music, and springs",
-  "url": "http:\/\/localhost:1313\/48_hours\/posts\/austin_48\/",
+  "url": "https:\/\/kylejones200.github.io\/48_hours\/posts\/austin_48\/",
   "datePublished": "2025-08-18T13:32:03-05:00",
   "dateModified": "2025-08-18T13:32:03-05:00",
   "author": {
     "@type": "Organization",
     "name": "48 Hours",
-    "url": "http:\/\/localhost:1313\/48_hours\/"
+    "url": "https:\/\/kylejones200.github.io\/48_hours\/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "48 Hours",
-    "url": "http:\/\/localhost:1313\/48_hours\/",
+    "url": "https:\/\/kylejones200.github.io\/48_hours\/",
     "logo": {
       "@type": "ImageObject",
-      "url": "http:\/\/localhost:1313\/48_hours\/images/logo.png"
+      "url": "https:\/\/kylejones200.github.io\/48_hours\/images/logo.png"
     }
   },
   "about": {
@@ -858,7 +858,7 @@
   "keywords": ["austin"],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http:\/\/localhost:1313\/48_hours\/posts\/austin_48\/"
+    "@id": "https:\/\/kylejones200.github.io\/48_hours\/posts\/austin_48\/"
   }
 }
 </script>
@@ -880,7 +880,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
+            <a href="https://kylejones200.github.io/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -906,32 +906,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/48_hours/" title="Home">
+                <a href="https://kylejones200.github.io/48_hours/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/48_hours/cities/" title="Cities">
+                <a href="https://kylejones200.github.io/48_hours/cities/" title="Cities">
                     <span>Cities</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/48_hours/about/" title="About">
+                <a href="https://kylejones200.github.io/48_hours/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/48_hours/resources/" title="Resources">
+                <a href="https://kylejones200.github.io/48_hours/resources/" title="Resources">
                     <span>Resources</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/48_hours/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="https://kylejones200.github.io/48_hours/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/48_hours/work/" title="Work With Me">
+                <a href="https://kylejones200.github.io/48_hours/work/" title="Work With Me">
                     <span>Work With Me</span>
                 </a>
             </li>
@@ -945,12 +945,12 @@
     <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol class="breadcrumb-list">
     <li class="breadcrumb-item">
-      <a href="http://localhost:1313/48_hours/" class="breadcrumb-link">
+      <a href="https://kylejones200.github.io/48_hours/" class="breadcrumb-link">
         <span>🏠</span>
         <span>Home</span>
       </a>
     </li><li class="breadcrumb-item">
-      <a href="http://localhost:1313/48_hours/cities/" class="breadcrumb-link">Cities</a>
+      <a href="https://kylejones200.github.io/48_hours/cities/" class="breadcrumb-link">Cities</a>
     </li><li class="breadcrumb-item breadcrumb-current" aria-current="page">
       <span>48 Hours in Austin, TX</span>
     </li></ol>
@@ -968,13 +968,13 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   
-  const map"Austin-Map" = L.map('austin-map').setView(["30.2672", "-97.7431"], "13");
+  const mapInstance = L.map('austin-map').setView(["30.2672", "-97.7431"], "13");
   
   
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19
-  }).addTo(map"Austin-Map");
+  }).addTo(mapInstance);
 
   
   const hotelIcon = L.divIcon({
@@ -1001,7 +1001,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   window.cityMaps = window.cityMaps || {};
   window.cityMaps['austin-map'] = {
-    map: map"Austin-Map",
+    map: mapInstance,
     icons: { hotel: hotelIcon, restaurant: restaurantIcon, attraction: attractionIcon },
     routes: { day1: null, day2: null }
   };
@@ -1667,15 +1667,15 @@ This sleek library houses exhibits on LBJ’s Great Society, civil rights battle
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/48_hours/tags/austin/">Austin</a></li>
+      <li><a href="https://kylejones200.github.io/48_hours/tags/austin/">Austin</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/48_hours/posts/palm_springs/">
+  <a class="prev" href="https://kylejones200.github.io/48_hours/posts/palm_springs/">
     <span class="title">« Prev</span>
     <br>
     <span>4 Days in Palm Springs with Kids</span>
   </a>
-  <a class="next" href="http://localhost:1313/48_hours/posts/europe/bacharach/">
+  <a class="next" href="https://kylejones200.github.io/48_hours/posts/europe/bacharach/">
     <span class="title">Next »</span>
     <br>
     <span>48 Hours in Bacharach</span>
@@ -1687,7 +1687,7 @@ This sleek library houses exhibits on LBJ’s Great Society, civil rights battle
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="http://localhost:1313/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
+        <span>&copy; 2025 <a href="https://kylejones200.github.io/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
 
     <span>
         Powered by

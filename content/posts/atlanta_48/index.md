@@ -5,7 +5,7 @@ summary: "Barbecue, whale sharks, Olympic grounds, and a downtown stay."
 tags: ["atlanta","48-hours"]
 categories: ["cities"]
 cover:
-  image: "PXL_20250806_141418551.jpg"
+  image: "PXL_20250806_141418551.webp"
   alt: "Everything in Georgia is Peaches"
   relative: true
 

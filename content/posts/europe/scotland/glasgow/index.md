@@ -6,7 +6,7 @@ draft: false
 tags: [glasgow]
 categories: [48-hours]
 cover:
-  image: "PXL_20250105_234006581.jpg"
+  image: "PXL_20250610_132612195.webp"
   alt: "Skiing Sunlight Mountain, CO"
   relative: true
 ---
