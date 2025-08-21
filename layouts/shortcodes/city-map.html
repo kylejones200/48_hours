@@ -10,13 +10,13 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   // Initialize map
-  const map{{ $mapId | title }} = L.map('{{ $mapId }}').setView([{{ $lat }}, {{ $lng }}], {{ $zoom }});
+  const mapInstance = L.map('{{ $mapId }}').setView([{{ $lat }}, {{ $lng }}], {{ $zoom }});
   
   // Add tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 19
-  }).addTo(map{{ $mapId | title }});
+  }).addTo(mapInstance);
 
   // Custom icons
   const hotelIcon = L.divIcon({
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Store map reference globally for adding locations
   window.cityMaps = window.cityMaps || {};
   window.cityMaps['{{ $mapId }}'] = {
-    map: map{{ $mapId | title }},
+    map: mapInstance,
     icons: { hotel: hotelIcon, restaurant: restaurantIcon, attraction: attractionIcon },
     routes: { day1: null, day2: null }
   };
