@@ -51,3 +51,10 @@ If you want to close with one last round, grab dinner at a third barbecue spot. 
 
 Houston’s museum district alone fills a day, from children’s science labs to butterflies and Fabergé eggs. Bayou Bend adds history, while NASA shows the city’s reach to space. Meals are simple: line up for barbecue or sit down for fried chicken near the museums. Two days in Houston cover art, science, history, and smoke rising from brisket pits.
 
+
+## Space City
+**Space Center Houston**
+This is the official visitor center for NASA’s Johnson Space Center. The exhibits cover Apollo, the shuttle, and the Artemis program. Don’t miss the tram tour out to historic Mission Control. It’s as close as you’ll get to America’s spacefaring heart.
+*Practical info:* Open daily 10–5. Adults \$35. Parking \$10. 30 minutes south of downtown Houston. Website: [spacecenter.org](https://spacecenter.org).
+
+

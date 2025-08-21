@@ -39,3 +39,15 @@ Start easy. Grab coffee nearby or a quick breakfast. If the weather holds, circl
 ## Why 48 Hours Works
 
 Atlanta is compact and full. Food, history, and spectacle all sit close downtown. Two days give you enough to feel the city and enough reason to come back.
+
+
+
+## get presidential
+
+
+**Jimmy Carter Presidential Library (Atlanta, GA)**
+The museum covers Carter’s rise from Georgia farmer to president to Nobel laureate. His Nobel Peace Prize is on display. The landscaped grounds connect with the Carter Center, still active in human rights work. A peaceful place to reflect on a life of service.
+
+
+*Practical info:* Open daily 10–4:45. Adults \$12. In the Poncey-Highland neighborhood, a short ride from downtown. Website: [jimmycarterlibrary.gov](https://www.jimmycarterlibrary.gov).
+

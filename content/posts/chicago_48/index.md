@@ -36,3 +36,20 @@ Evening leaves time for another walk downtown, or a return to Millennium Park to
 ## Why 48 Hours Works
 
 Chicago compresses well. You move from masterpieces in the Art Institute to starfish in the Shedd, from Purple Pig plates to Aviary cocktails, from Millennium Park to the river’s edge. In two days you get the city’s rhythm: food, art, and water tied by architecture.
+
+## more art and activities
+**Art Institute of Chicago**
+Home to *American Gothic*, *Nighthawks*, and Seurat’s pointillist masterpiece, this museum is one of America’s finest. The Impressionist collection alone is worth the ticket.
+Its central location makes it an easy add to a day downtown. Even if you only dip in, you’ll see paintings you know from a thousand reproductions.
+*Practical info:* Open daily 11–5 (Thu & Fri until 8). Adults \$32. Right downtown by Millennium Park. Website: [artic.edu](https://www.artic.edu).
+
+
+
+**Shedd Aquarium (Chicago)**
+This 1930 lakefront landmark houses belugas, penguins, and colorful reef fish. At five million gallons, it’s one of the world’s largest indoor aquariums.
+Don’t miss the Caribbean Reef, where divers hand-feed fish daily. Buy tickets ahead to skip long weekend lines.
+
+*Practical info:* Open daily 9–5 (summer to 6). Adults \$39.95. Buy timed tickets online to avoid lines. Walkable from downtown or bus #146. Website: [sheddaquarium.org](https://www.sheddaquarium.org).
+
+
+

@@ -48,6 +48,3 @@ The Doc Holliday Collection is tucked into the basement of a clothing store on G
 
 **Closing Line**
 Sunlight Mountain is perfect for families who are casual skiers. It trades glamour for honesty. It trades lift lines for long glides. Its slopes glow as the day cools. That is skiing defined—simple, bright, and real.
-
-
-

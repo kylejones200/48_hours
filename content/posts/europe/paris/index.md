@@ -36,3 +36,21 @@ At night, take a boat ride on the Seine. The bridges light up, Notre-Dame stands
 ## Conclusion
 
 Two days in Paris give you the highlights: monuments, museums, and street life. You leave knowing the city’s rhythm, with enough memories to draw you back.
+
+
+Extra art museums to visit:
+
+**Musée du Luxembourg (Paris)**
+One of Paris’s oldest public museums, it once displayed Rubens’ cycle of Marie de’ Medici. Today it hosts rotating exhibitions in the old palace grounds.
+It’s an easy stop after a stroll in the Luxembourg Gardens, and the shows are often top-notch.
+*Practical info:* Open daily 10:30–7. Tickets around €15 (varies by exhibit). Combine with a stroll in the gardens. Website: [museeduluxembourg.fr](https://museeduluxembourg.fr).
+
+
+
+**Fondation Louis Vuitton (Paris)**
+Frank Gehry’s glass “sails” house Paris’s most striking modern art venue. Opened in 2014, it focuses on contemporary shows with blockbuster loans.
+Check the exhibition schedule — you might catch something like a full David Hockney retrospective. Pair it with a walk in the Bois de Boulogne.
+
+
+*Practical info:* Open daily except Tue, 11–8. Tickets €16–22. Take Metro line 1 to Les Sablons, then a 10-minute walk or shuttle bus. Website: [fondationlouisvuitton.fr](https://www.fondationlouisvuitton.fr/en).
+

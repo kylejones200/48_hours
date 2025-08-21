@@ -38,3 +38,12 @@ Begin at the Old Course. Even if you do not play, the Swilcan Bridge and Royal &
 Wander the University of St Andrews. Its quadrangles and courtyards date back to the 15th century. Students’ traditions—like the red gowns and May Dip—still shape the atmosphere.
 
 End your trip with a walk along West Sands Beach. The wide strand made famous in *Chariots of Fire* offers space to reflect before leaving.
+
+
+**R\&A World Golf Museum (St Andrews, Scotland)**
+Across from the Old Course, this museum charts golf’s story from medieval pastime to global sport. Clubs, balls, and old scorecards tell the tale. Fans will enjoy the multimedia exhibits that bring great tournaments to life. Even non-golfers will appreciate the town’s deep ties to the game.
+
+*Practical info:* Open daily 10–5. Adults £12. Easy walk from central St Andrews bus station. Website: [randa.org/world-golf-museum](https://www.randa.org/world-golf-museum).
+
+
+

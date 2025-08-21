@@ -31,3 +31,15 @@ Lunch at Neighborhood Sushi feels light and modern. Then spend the afternoon on 
 ## Why It Works for a Weekend
 
 The Westin is a good base. Moonshine, Eddie V’s, Fixe, and Neighborhood Sushi cover the meals. Barton Springs and South Congress show the city by day. Sixth Street and Rainey Street keep it moving at night. In 48 hours you taste barbecue, swim cold water, and hear music that never stops.
+
+
+
+## get presidential
+
+
+**LBJ Presidential Library (Austin, TX)**
+Highlights Johnson’s Great Society, civil rights laws, and the Vietnam War. Replica Oval Office included.
+This sleek library houses exhibits on LBJ’s Great Society, civil rights battles, and the Vietnam War. A full-scale replica of his Oval Office is a highlight. The building sits on the University of Texas campus. It’s a sobering but fascinating look at America in the 1960s.
+
+*Practical info:* Open daily 9–5. Adults \$13. On the UT Austin campus, 10 minutes from downtown. Website: [lbjlibrary.org](https://www.lbjlibrary.org).
+
