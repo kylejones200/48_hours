@@ -3,10 +3,10 @@ title: "48 Hours in Houston"
 date: 2025-08-18T13:32:03-05:00
 summary: "Museum District, butterflies and Fabergé at HMNS, MFAH light tunnels, Bayou Bend, NASA’s Johnson Space Center, and barbecue runs across the city."
 draft: false
-tags: [houston]
-categories: [48-hours]
+tags: ["houston"]
+categories: ["48-hours"]
 cover:
-  image: "cover.jpg"
+  image: "PXL_20210306_142251469.jpg"
   alt: "48 Hours in Houston"
   relative: true
 ---

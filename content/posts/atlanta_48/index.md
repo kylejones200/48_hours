@@ -1,21 +1,19 @@
 ---
-
 title: "48 Hours in Atlanta"
 date: 2025-08-16
 summary: "Barbecue, whale sharks, Olympic grounds, and a downtown stay."
-tags: \["atlanta","48-hours"]
-categories: \["cities"]
+tags: ["atlanta","48-hours"]
+categories: ["cities"]
 cover:
-  image: "PXL\_20250806\_141418551.jpg"
-  alt: "Everything in Georgia is Peaches"
-  relative: true
+  image: "PXL_20250806_141418551.jpg"
+  alt: "Everything in Georgia is Peaches"
+  relative: true
 
 ---
 
 Atlanta rewards a short visit. In two days you can taste barbecue, watch whale sharks glide past, stand on Olympic grounds, and stay in a hotel at the center of it all.
 
 ## Where to Stay
-
 Book a room at the Glenn Hotel downtown. Drop your bags and step outside. The lobby glows with warm light and modern art, and a rooftop bar waits above. From there, walk to Brother’s BBQ. Order ribs or brisket with greens and mac and cheese. The smoke hits first, then the spice, and the meal feels like a welcome. After dinner, wander the streets near the hotel. Downtown glitters at night, full of noise and light.
 
 **Brother’s BBQ**

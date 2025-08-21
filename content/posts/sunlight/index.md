@@ -3,8 +3,8 @@ title: "Skiing Sunlight Mountain, CO"
 date: 2025-08-18T13:32:03-05:00
 summary: "A friendly, no‑frills ski day at Sunlight Mountain with easy logistics, sunset glow, local vibe, and hot‑springs après in Glenwood Springs."
 draft: false
-tags: [sunlight]
-categories: [general]
+tags: ["sunlight"]
+categories: ["general"]
 cover:
   image: "PXL_20250105_234006581.jpg"
   alt: "Skiing Sunlight Mountain, CO"

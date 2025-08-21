@@ -3,10 +3,10 @@ title: "48 Hours in Chicago, IL"
 date: 2025-08-18T13:32:03-05:00
 summary: "Two days of Chicago highlights: Art Institute, Millennium Park, river architecture tour, Museum of Science and Industry, Shedd, and food from The Purple Pig to the Aviary."
 draft: false
-tags: [chicago]
-categories: [48-hours]
+tags: ["chicago"]
+categories: ["48-hours"]
 cover:
-  image: "cover.jpg"
+  image: "PXL_20230315_004451429.jpg"
   alt: "48 Hours in Chicago, IL"
   relative: true
 ---

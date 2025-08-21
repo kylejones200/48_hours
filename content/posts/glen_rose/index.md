@@ -3,8 +3,8 @@ title: "48 Hours in Glen Rose, TX"
 date: 2025-08-18T14:05:00-05:00
 summary: "Dinosaur tracks, wildlife safaris, riverside parks, and small-town museums in the 'Dinosaur Capital of Texas.'"
 draft: false
-tags: [glen-rose]
-categories: [48-hours]
+tags: ["glen-rose"]
+categories: ["48-hours"]
 cover:
   image: "PXL_20201010_151523466.PORTRAIT.jpg"
   alt: "48 Hours in Glen Rose, TX"

@@ -3,10 +3,10 @@ title: "48 Hours in Memphis"
 date: 2025-08-18T13:32:03-05:00
 summary: "Memphis offers history, culture, and tunes. You can live among legends here. We start with Graceland. Then we explore science, river lore, and quiet parks."
 draft: false
-tags: [memphis]
-categories: [48-hours]
+tags: ["memphis"]
+categories: ["48-hours"]
 cover:
-  image: "content/posts/memphis_48/PXL_20241011_161448577.jpg"
+  image: "PXL_20241011_161448577.jpg"
   alt: "48 Hours in Memphis"
   relative: true
 ---

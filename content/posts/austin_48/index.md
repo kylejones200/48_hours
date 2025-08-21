@@ -1,22 +1,15 @@
 ---
-
 title: "48 Hours in Austin, TX"
 date: 2025-08-18T13:32:03-05:00
-summary: "A weekend guide to Austin’s food, music, and springs"
+summary: "A weekend guide to Austin's food, music, and springs"
 draft: false
-tags: \[austin]
-categories: \[48-hours]
-cover:
-  image: "cover.jpg"
-  alt: "48 Hours in Austin, TX"
-  relative: true
-
+tags: ["austin"]
+categories: ["48-hours"]
 ---
 
 Austin runs on barbecue, live music, and cold spring water. In two days you can eat brisket, swim in Barton Springs, shop South Congress, and end nights under string lights with a band playing close by.
 
 ## Day 1 Evening: Arrival, Dinner, and Sixth Street
-
 Stay at the Westin Austin Downtown, a block from Sixth Street. Rooms have tall windows and a rooftop pool with city views. For dinner, walk to Moonshine Patio Bar & Grill. Plates of Southern comfort food arrive in a space that feels warm and historic. Afterward, step into Sixth Street. Bars fill each block, bands play blues and rock, and the street itself turns into one long festival.
 
 ## Day 2 Morning: Barbecue and South Congress

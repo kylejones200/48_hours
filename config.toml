@@ -2,6 +2,7 @@ baseURL = "https://kylejones200.github.io/48_hours/"
 languageCode = "en-us"
 title = "48 Hours – City Guides for Fast Trips"
 theme = "github.com/adityatelange/hugo-PaperMod"
+googleAnalytics = "G-0CX9KZPX6X"
  
 [pagination]
   pagerSize = 12
