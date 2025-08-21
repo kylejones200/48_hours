@@ -1,0 +1,14 @@
+{{/* Calculate estimated reading time */}}
+{{- $content := .Content | plainify -}}
+{{- $wordCount := len (split $content " ") -}}
+{{- $readingSpeed := 200 -}} {{/* Average words per minute */}}
+{{- $readingTime := div $wordCount $readingSpeed -}}
+{{- if lt $readingTime 1 -}}
+  {{- $readingTime = 1 -}}
+{{- end -}}
+
+<div class="reading-time">
+  <span class="reading-time-icon">📖</span>
+  <span class="reading-time-text">{{ $readingTime }} min read</span>
+  <span class="word-count">({{ $wordCount }} words)</span>
+</div>

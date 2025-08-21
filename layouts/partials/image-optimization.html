@@ -1,0 +1,27 @@
+{{/* Image optimization partial with WebP support and lazy loading */}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $width := .width -}}
+{{- $height := .height -}}
+
+{{- if $src -}}
+<picture class="optimized-image {{ $class }}">
+  {{/* Generate WebP version if original is not WebP */}}
+  {{- if not (strings.HasSuffix $src ".webp") -}}
+    {{- $webpSrc := replace $src (path.Ext $src) ".webp" -}}
+    <source srcset="{{ $webpSrc }}" type="image/webp">
+  {{- end -}}
+  
+  <img 
+    src="{{ $src }}" 
+    alt="{{ $alt }}"
+    loading="{{ $loading }}"
+    {{- if $width }} width="{{ $width }}"{{ end }}
+    {{- if $height }} height="{{ $height }}"{{ end }}
+    {{- if eq $loading "lazy" }} decoding="async"{{ end }}
+    class="responsive-image"
+  >
+</picture>
+{{- end -}}

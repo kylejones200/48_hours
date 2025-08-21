@@ -13,6 +13,30 @@ cover:
 
 Atlanta rewards a short visit. In two days you can taste barbecue, watch whale sharks glide past, stand on Olympic grounds, and stay in a hotel at the center of it all.
 
+{{ partial "breadcrumbs.html" . }}
+
+<div class="guide-header">
+  {{ partial "reading-time.html" . }}
+  {{ partial "print-guide.html" . }}
+</div>
+
+{{< weather-forecast city="Atlanta" lat="33.7490" lng="-84.3880" id="atlanta-weather" >}}
+
+{{< city-map id="atlanta-map" city="Atlanta" lat="33.7490" lng="-84.3880" zoom="14" height="450px" >}}
+
+{{< map-location map="atlanta-map" type="hotel" name="The Glenn Hotel" lat="33.7537" lng="-84.3901" description="Downtown hotel with rooftop bar and modern rooms" day="1" >}}
+
+{{< map-location map="atlanta-map" type="restaurant" name="Brother's BBQ" lat="33.7520" lng="-84.3920" description="Local BBQ joint with tender ribs and smoky brisket" day="1" >}}
+
+{{< map-location map="atlanta-map" type="attraction" name="Georgia Aquarium" lat="33.7634" lng="-84.3951" description="World-class aquarium with whale sharks and interactive exhibits" day="2" >}}
+
+{{< map-location map="atlanta-map" type="attraction" name="Centennial Olympic Park" lat="33.7606" lng="-84.3933" description="22-acre park commemorating the 1996 Olympics with fountains and events" day="2" >}}
+
+{{< map-location map="atlanta-map" type="attraction" name="Jimmy Carter Presidential Library" lat="33.7667" lng="-84.3472" description="Museum covering Carter's presidency and Nobel Peace Prize" day="2" >}}
+
+{{< map-route map="atlanta-map" day="1" color="#E91E63" >}}
+{{< map-route map="atlanta-map" day="2" color="#9C27B0" >}}
+
 ## Where to Stay
 Book a room at the Glenn Hotel downtown. Drop your bags and step outside. The lobby glows with warm light and modern art, and a rooftop bar waits above. From there, walk to Brother’s BBQ. Order ribs or brisket with greens and mac and cheese. The smoke hits first, then the spice, and the meal feels like a welcome. After dinner, wander the streets near the hotel. Downtown glitters at night, full of noise and light.
 
@@ -20,17 +44,26 @@ Book a room at the Glenn Hotel downtown. Drop your bags and step outside. The lo
 Brother’s BBQ feels like a local hangout. The menu is simple—ribs, brisket, pulled pork. The meat is tender and smoky, the sides hearty. The place has an easy rhythm that makes you stay longer than planned.
 
 **Georgia Aquarium**
-The Georgia Aquarium ranks among the largest in the world. Whale sharks circle in a massive tank. Rays pass overhead in glass tunnels. Families crowd into dolphin and sea lion shows. The scale of the place makes it less a stop and more a half-day journey.
 
-**Centennial Olympic Park**
-Centennial Olympic Park keeps the memory of 1996 alive. Its fountains leap in time with music. Wide lawns stretch across 22 acres, framed by downtown towers. Kids run through splash pads, couples stroll, and summer events fill the open space. It’s part history, part everyday park.
+### Breakfast
+Start your day at West Egg Cafe for Southern breakfast classics.
 
-**The Glenn Hotel**
-The Glenn Hotel gives you a base close to everything. Rooms are clean and bright, the lobby warm with light and art. From the rooftop bar you look across the city. Walk out the front door and you reach the aquarium and Olympic Park within minutes.
+### Lunch  
+Head to Brother's BBQ for authentic Georgia barbecue.
 
-## Day 2: Aquarium and Olympic Park
+### Dinner
+End the day at The Optimist for fresh seafood in a lively atmosphere.
 
-Wake up near the action. Walk to the Georgia Aquarium and spend the morning. Watch whale sharks drift past, rays sweep overhead, and crowds cheer at the shows. By afternoon, head into Olympic Park. Sit near the fountains, stretch out on the grass, and watch the city move around you. End the night back at the Glenn rooftop, where the skyline shifts from gold to dark blue.
+## Day 2
+
+### Morning
+Visit the Georgia Aquarium to see whale sharks and beluga whales.
+
+### Afternoon
+Walk through Centennial Olympic Park and visit the nearby World of Coca-Cola.
+
+### Evening
+Explore the Atlanta BeltLine for dinner and drinks at Ponce City Market.
 
 ## Day 3: Slow Morning and Departure
 
@@ -40,9 +73,11 @@ Start easy. Grab coffee nearby or a quick breakfast. If the weather holds, circl
 
 Atlanta is compact and full. Food, history, and spectacle all sit close downtown. Two days give you enough to feel the city and enough reason to come back.
 
+---
 
+{{ partial "social-sharing.html" . }}
 
-## get presidential
+{{ partial "related-cities.html" . }}
 
 
 **Jimmy Carter Presidential Library (Atlanta, GA)**

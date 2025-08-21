@@ -1,0 +1,7 @@
+{{- $pages := where .Site.RegularPages "Type" "in" (slice "posts" "cities" "resources") -}}
+{{- $searchIndex := slice -}}
+{{- range $pages -}}
+  {{- $searchEntry := dict "title" .Title "content" (.Plain | truncate 300) "permalink" .Permalink "date" (.Date.Format "2006-01-02") "section" .Section "tags" .Params.tags -}}
+  {{- $searchIndex = $searchIndex | append $searchEntry -}}
+{{- end -}}
+{{- $searchIndex | jsonify -}}

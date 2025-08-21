@@ -13,6 +13,25 @@ cover:
 
 Chicago stacks art, architecture, and food in close reach. In two days you can eat well, walk Millennium Park, visit world-class museums, and finish the night at a hidden bar that feels like a gift.
 
+{{< city-map id="chicago-map" city="Chicago" lat="41.8781" lng="-87.6298" zoom="12" height="450px" >}}
+
+{{< map-location map="chicago-map" type="attraction" name="Art Institute of Chicago" lat="41.8796" lng="-87.6237" description="World-class art museum with American icons like Hopper's Nighthawks" day="1" >}}
+
+{{< map-location map="chicago-map" type="attraction" name="Millennium Park" lat="41.8826" lng="-87.6226" description="Iconic park with Cloud Gate (The Bean) and skyline views" day="1" >}}
+
+{{< map-location map="chicago-map" type="attraction" name="Chicago River Architecture Tour" lat="41.8881" lng="-87.6245" description="Boat tour showcasing Chicago's famous skyline and architecture" day="1" >}}
+
+{{< map-location map="chicago-map" type="restaurant" name="The Purple Pig" lat="41.8902" lng="-87.6234" description="Mediterranean small plates and house-made charcuterie on Michigan Avenue" day="1" >}}
+
+{{< map-location map="chicago-map" type="restaurant" name="The Aviary" lat="41.8847" lng="-87.6476" description="Grant Achatz's theatrical cocktail bar with performance art drinks" day="1" >}}
+
+{{< map-location map="chicago-map" type="attraction" name="Museum of Science and Industry" lat="41.7906" lng="-87.5831" description="Massive museum with submarines, trains, and interactive exhibits" day="2" >}}
+
+{{< map-location map="chicago-map" type="attraction" name="Shedd Aquarium" lat="41.8676" lng="-87.6140" description="Lakefront aquarium with diverse marine life" day="2" >}}
+
+{{< map-route map="chicago-map" day="1" color="#E91E63" >}}
+{{< map-route map="chicago-map" day="2" color="#9C27B0" >}}
+
 ## Where to Stay
 
 Downtown makes sense. Hotels near Michigan Avenue, Millennium Park, or the Loop put you close to the Art Institute, Shedd Aquarium, and the Museum of Science and Industry. From here, everything sits within a walk or quick ride.

@@ -14,6 +14,19 @@ cover:
 
 Eureka Springs feels tucked into the Ozark hills, with winding streets, Victorian houses, and shops that climb up steep roads. In two days you can stay in a hillside Airbnb, ride an old train, wander quirky stores, and visit a house made of stone and glass unlike any other.
 
+{{< city-map id="eureka-map" city="Eureka Springs" lat="36.4009" lng="-93.7379" zoom="14" height="450px" >}}
+
+{{< map-location map="eureka-map" type="hotel" name="Crescent Hotel" lat="36.4015" lng="-93.7385" description="America's Most Haunted Hotel built in 1886 with ghost tours" day="1" >}}
+
+{{< map-location map="eureka-map" type="attraction" name="Eureka Springs & North Arkansas Railway" lat="36.4020" lng="-93.7400" description="Vintage train rides through Ozark woods with historic locomotives" day="1" >}}
+
+{{< map-location map="eureka-map" type="attraction" name="Historic Downtown" lat="36.4009" lng="-93.7379" description="Winding streets with Victorian houses and quirky shops" day="2" >}}
+
+{{< map-location map="eureka-map" type="attraction" name="Quigley's Castle" lat="36.4100" lng="-93.7200" description="Unique folk-art house made of stone and glass" day="2" >}}
+
+{{< map-route map="eureka-map" day="1" color="#E91E63" >}}
+{{< map-route map="eureka-map" day="2" color="#9C27B0" >}}
+
 ## Where to Stay
 
 Book an **Airbnb** close to the historic district. Many cottages and cabins sit on the hillsides, with porches that look out over the trees. Staying local keeps you within walking distance of shops and restaurants while giving you a retreat at night.

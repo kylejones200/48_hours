@@ -1,0 +1,33 @@
+{{/* Related Cities suggestions */}}
+{{- $currentCity := index .Params.tags 0 -}}
+{{- $currentRegion := .Params.region | default "midwest" -}}
+{{- $relatedPosts := where .Site.RegularPages "Section" "posts" -}}
+{{- $relatedPosts = where $relatedPosts ".Permalink" "!=" .Permalink -}}
+{{- $relatedPosts = $relatedPosts | shuffle | first 3 -}}
+
+<div class="related-cities">
+  <h3>Explore More Cities</h3>
+  <div class="related-grid">
+    {{- range $relatedPosts -}}
+    <div class="related-card">
+      {{- if .Params.cover.image -}}
+      <div class="related-image">
+        {{- partial "image-optimization.html" (dict "src" (printf "%s%s" .Permalink .Params.cover.image) "alt" .Params.cover.alt "class" "related-img" "loading" "lazy") -}}
+      </div>
+      {{- end -}}
+      
+      <div class="related-content">
+        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+        <p class="related-summary">{{ .Summary | truncate 100 }}</p>
+        <div class="related-meta">
+          {{- partial "reading-time.html" . -}}
+        </div>
+      </div>
+    </div>
+    {{- end -}}
+  </div>
+  
+  <div class="view-all">
+    <a href="/cities/" class="view-all-btn">View All City Guides →</a>
+  </div>
+</div>

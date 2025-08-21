@@ -1,0 +1,75 @@
+{{- $mapId := .Get "map" | default "city-map" -}}
+{{- $day := .Get "day" -}}
+{{- $color := .Get "color" | default "#007cba" -}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait for map and locations to be loaded
+  setTimeout(function() {
+    if (window.cityMaps && window.cityMaps['{{ $mapId }}'] && window.cityMaps['{{ $mapId }}'].locations) {
+      const mapData = window.cityMaps['{{ $mapId }}'];
+      const map = mapData.map;
+      const locations = mapData.locations;
+      
+      // Filter locations by day
+      const dayLocations = locations.filter(loc => loc.day === '{{ $day }}');
+      
+      if (dayLocations.length > 1) {
+        // Create route coordinates
+        const routeCoords = dayLocations.map(loc => [loc.lat, loc.lng]);
+        
+        // Remove existing route for this day
+        if (mapData.routes['day{{ $day }}']) {
+          map.removeLayer(mapData.routes['day{{ $day }}']);
+        }
+        
+        // Add new route
+        const route = L.polyline(routeCoords, {
+          color: '{{ $color }}',
+          weight: 4,
+          opacity: 0.7,
+          dashArray: '10, 5'
+        }).addTo(map);
+        
+        // Store route reference
+        mapData.routes['day{{ $day }}'] = route;
+        
+        // Add route control
+        if (!document.getElementById('route-controls-{{ $mapId }}')) {
+          const controlsDiv = document.createElement('div');
+          controlsDiv.id = 'route-controls-{{ $mapId }}';
+          controlsDiv.className = 'route-controls';
+          controlsDiv.innerHTML = `
+            <div class="route-toggle">
+              <label><input type="checkbox" id="day1-{{ $mapId }}" checked> Day 1 Route</label>
+              <label><input type="checkbox" id="day2-{{ $mapId }}" checked> Day 2 Route</label>
+            </div>
+          `;
+          document.getElementById('{{ $mapId }}').parentNode.insertBefore(controlsDiv, document.getElementById('{{ $mapId }}').nextSibling);
+          
+          // Add event listeners for route toggles
+          document.getElementById('day1-{{ $mapId }}').addEventListener('change', function() {
+            if (mapData.routes.day1) {
+              if (this.checked) {
+                mapData.routes.day1.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day1);
+              }
+            }
+          });
+          
+          document.getElementById('day2-{{ $mapId }}').addEventListener('change', function() {
+            if (mapData.routes.day2) {
+              if (this.checked) {
+                mapData.routes.day2.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day2);
+              }
+            }
+          });
+        }
+      }
+    }
+  }, 1000);
+});
+</script>

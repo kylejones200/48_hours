@@ -2,157 +2,185 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on 48 Hours – City Guides for Fast Trips</title>
-    <link>https://kylejones200.github.io/48_hours/tags/</link>
+    <link>http://localhost:1313/48_hours/tags/</link>
     <description>Recent content in Tags on 48 Hours – City Guides for Fast Trips</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 15:05:00 -0500</lastBuildDate>
-    <atom:link href="https://kylejones200.github.io/48_hours/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/48_hours/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Washington-Dc</title>
-      <link>https://kylejones200.github.io/48_hours/tags/washington-dc/</link>
+      <link>http://localhost:1313/48_hours/tags/washington-dc/</link>
       <pubDate>Mon, 18 Aug 2025 15:05:00 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/washington-dc/</guid>
+      <guid>http://localhost:1313/48_hours/tags/washington-dc/</guid>
       <description></description>
     </item>
     <item>
       <title>Glen-Rose</title>
-      <link>https://kylejones200.github.io/48_hours/tags/glen-rose/</link>
+      <link>http://localhost:1313/48_hours/tags/glen-rose/</link>
       <pubDate>Mon, 18 Aug 2025 14:05:00 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/glen-rose/</guid>
+      <guid>http://localhost:1313/48_hours/tags/glen-rose/</guid>
       <description></description>
     </item>
     <item>
       <title>Austin</title>
-      <link>https://kylejones200.github.io/48_hours/tags/austin/</link>
+      <link>http://localhost:1313/48_hours/tags/austin/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/austin/</guid>
+      <guid>http://localhost:1313/48_hours/tags/austin/</guid>
       <description></description>
     </item>
     <item>
       <title>Bacharach</title>
-      <link>https://kylejones200.github.io/48_hours/tags/bacharach/</link>
+      <link>http://localhost:1313/48_hours/tags/bacharach/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/bacharach/</guid>
+      <guid>http://localhost:1313/48_hours/tags/bacharach/</guid>
       <description></description>
     </item>
     <item>
       <title>Bentonville</title>
-      <link>https://kylejones200.github.io/48_hours/tags/bentonville/</link>
+      <link>http://localhost:1313/48_hours/tags/bentonville/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/bentonville/</guid>
+      <guid>http://localhost:1313/48_hours/tags/bentonville/</guid>
       <description></description>
     </item>
     <item>
       <title>Chicago</title>
-      <link>https://kylejones200.github.io/48_hours/tags/chicago/</link>
+      <link>http://localhost:1313/48_hours/tags/chicago/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/chicago/</guid>
+      <guid>http://localhost:1313/48_hours/tags/chicago/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dallas</title>
+      <link>http://localhost:1313/48_hours/tags/dallas/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/48_hours/tags/dallas/</guid>
       <description></description>
     </item>
     <item>
       <title>Denver</title>
-      <link>https://kylejones200.github.io/48_hours/tags/denver/</link>
+      <link>http://localhost:1313/48_hours/tags/denver/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/denver/</guid>
+      <guid>http://localhost:1313/48_hours/tags/denver/</guid>
       <description></description>
     </item>
     <item>
       <title>Eureka-Springs</title>
-      <link>https://kylejones200.github.io/48_hours/tags/eureka-springs/</link>
+      <link>http://localhost:1313/48_hours/tags/eureka-springs/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/eureka-springs/</guid>
+      <guid>http://localhost:1313/48_hours/tags/eureka-springs/</guid>
       <description></description>
     </item>
     <item>
       <title>Frankfurt</title>
-      <link>https://kylejones200.github.io/48_hours/tags/frankfurt/</link>
+      <link>http://localhost:1313/48_hours/tags/frankfurt/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/frankfurt/</guid>
+      <guid>http://localhost:1313/48_hours/tags/frankfurt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Guthrie</title>
+      <link>http://localhost:1313/48_hours/tags/guthrie/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/48_hours/tags/guthrie/</guid>
       <description></description>
     </item>
     <item>
       <title>Houston</title>
-      <link>https://kylejones200.github.io/48_hours/tags/houston/</link>
+      <link>http://localhost:1313/48_hours/tags/houston/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/houston/</guid>
+      <guid>http://localhost:1313/48_hours/tags/houston/</guid>
       <description></description>
     </item>
     <item>
       <title>Luxembourg</title>
-      <link>https://kylejones200.github.io/48_hours/tags/luxembourg/</link>
+      <link>http://localhost:1313/48_hours/tags/luxembourg/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/luxembourg/</guid>
+      <guid>http://localhost:1313/48_hours/tags/luxembourg/</guid>
       <description></description>
     </item>
     <item>
       <title>Memphis</title>
-      <link>https://kylejones200.github.io/48_hours/tags/memphis/</link>
+      <link>http://localhost:1313/48_hours/tags/memphis/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/memphis/</guid>
+      <guid>http://localhost:1313/48_hours/tags/memphis/</guid>
       <description></description>
     </item>
     <item>
       <title>Oklahoma-City</title>
-      <link>https://kylejones200.github.io/48_hours/tags/oklahoma-city/</link>
+      <link>http://localhost:1313/48_hours/tags/oklahoma-city/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/oklahoma-city/</guid>
+      <guid>http://localhost:1313/48_hours/tags/oklahoma-city/</guid>
       <description></description>
     </item>
     <item>
       <title>Palm-Springs</title>
-      <link>https://kylejones200.github.io/48_hours/tags/palm-springs/</link>
+      <link>http://localhost:1313/48_hours/tags/palm-springs/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/palm-springs/</guid>
+      <guid>http://localhost:1313/48_hours/tags/palm-springs/</guid>
       <description></description>
     </item>
     <item>
       <title>Paris</title>
-      <link>https://kylejones200.github.io/48_hours/tags/paris/</link>
+      <link>http://localhost:1313/48_hours/tags/paris/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/paris/</guid>
+      <guid>http://localhost:1313/48_hours/tags/paris/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Photos</title>
+      <link>http://localhost:1313/48_hours/tags/photos/</link>
+      <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
+      <guid>http://localhost:1313/48_hours/tags/photos/</guid>
       <description></description>
     </item>
     <item>
       <title>Scotland</title>
-      <link>https://kylejones200.github.io/48_hours/tags/scotland/</link>
+      <link>http://localhost:1313/48_hours/tags/scotland/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/scotland/</guid>
+      <guid>http://localhost:1313/48_hours/tags/scotland/</guid>
       <description></description>
     </item>
     <item>
       <title>Sunlight</title>
-      <link>https://kylejones200.github.io/48_hours/tags/sunlight/</link>
+      <link>http://localhost:1313/48_hours/tags/sunlight/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/sunlight/</guid>
+      <guid>http://localhost:1313/48_hours/tags/sunlight/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel-Journal</title>
-      <link>https://kylejones200.github.io/48_hours/tags/travel-journal/</link>
+      <link>http://localhost:1313/48_hours/tags/travel-journal/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/travel-journal/</guid>
+      <guid>http://localhost:1313/48_hours/tags/travel-journal/</guid>
       <description></description>
     </item>
     <item>
       <title>Tulsa</title>
-      <link>https://kylejones200.github.io/48_hours/tags/tulsa/</link>
+      <link>http://localhost:1313/48_hours/tags/tulsa/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/tulsa/</guid>
+      <guid>http://localhost:1313/48_hours/tags/tulsa/</guid>
       <description></description>
     </item>
     <item>
       <title>48-Hours</title>
-      <link>https://kylejones200.github.io/48_hours/tags/48-hours/</link>
+      <link>http://localhost:1313/48_hours/tags/48-hours/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/48-hours/</guid>
+      <guid>http://localhost:1313/48_hours/tags/48-hours/</guid>
       <description></description>
     </item>
     <item>
       <title>Atlanta</title>
-      <link>https://kylejones200.github.io/48_hours/tags/atlanta/</link>
+      <link>http://localhost:1313/48_hours/tags/atlanta/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/tags/atlanta/</guid>
+      <guid>http://localhost:1313/48_hours/tags/atlanta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Museums</title>
+      <link>http://localhost:1313/48_hours/tags/museums/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/48_hours/tags/museums/</guid>
       <description></description>
     </item>
   </channel>

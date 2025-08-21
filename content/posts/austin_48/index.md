@@ -9,6 +9,32 @@ categories: ["48-hours"]
 
 Austin runs on barbecue, live music, and cold spring water. In two days you can eat brisket, swim in Barton Springs, shop South Congress, and end nights under string lights with a band playing close by.
 
+{{< city-map id="austin-map" city="Austin" lat="30.2672" lng="-97.7431" zoom="13" height="450px" >}}
+
+{{< map-location map="austin-map" type="hotel" name="Westin Austin Downtown" lat="30.2669" lng="-97.7428" description="Downtown hotel with rooftop pool and city views" day="1" >}}
+
+{{< map-location map="austin-map" type="restaurant" name="Moonshine Patio Bar & Grill" lat="30.2676" lng="-97.7411" description="Southern comfort food in warm, historic setting" day="1" >}}
+
+{{< map-location map="austin-map" type="attraction" name="Sixth Street" lat="30.2672" lng="-97.7394" description="Famous entertainment district with live music and bars" day="1" >}}
+
+{{< map-location map="austin-map" type="restaurant" name="Franklin Barbecue" lat="30.2707" lng="-97.7197" description="Legendary BBQ spot famous for brisket" day="2" >}}
+
+{{< map-location map="austin-map" type="attraction" name="South Congress" lat="30.2515" lng="-97.7473" description="Trendy street with vintage shops, murals, and coffee houses" day="2" >}}
+
+{{< map-location map="austin-map" type="restaurant" name="Eddie V's Prime Seafood" lat="30.2669" lng="-97.7431" description="Upscale steak and seafood restaurant" day="2" >}}
+
+{{< map-location map="austin-map" type="attraction" name="Barton Springs Pool" lat="30.2640" lng="-97.7712" description="Natural spring-fed pool with year-round cold water" day="3" >}}
+
+{{< map-location map="austin-map" type="attraction" name="Zilker Park" lat="30.2669" lng="-97.7731" description="Large park perfect for outdoor activities" day="3" >}}
+
+{{< map-location map="austin-map" type="restaurant" name="Neighborhood Sushi" lat="30.2515" lng="-97.7473" description="Light and modern sushi restaurant" day="3" >}}
+
+{{< map-location map="austin-map" type="attraction" name="Rainey Street" lat="30.2630" lng="-97.7379" description="Historic district with converted house bars and food trucks" day="3" >}}
+
+{{< map-route map="austin-map" day="1" color="#E91E63" >}}
+{{< map-route map="austin-map" day="2" color="#9C27B0" >}}
+{{< map-route map="austin-map" day="3" color="#FF9800" >}}
+
 ## Day 1 Evening: Arrival, Dinner, and Sixth Street
 Stay at the Westin Austin Downtown, a block from Sixth Street. Rooms have tall windows and a rooftop pool with city views. For dinner, walk to Moonshine Patio Bar & Grill. Plates of Southern comfort food arrive in a space that feels warm and historic. Afterward, step into Sixth Street. Bars fill each block, bands play blues and rock, and the street itself turns into one long festival.
 

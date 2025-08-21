@@ -1,0 +1,28 @@
+{{- if not .IsHome -}}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a href="{{ .Site.BaseURL }}" class="breadcrumb-link">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+    </li>
+    
+    {{- if eq .Section "posts" -}}
+    <li class="breadcrumb-item">
+      <a href="{{ .Site.BaseURL }}cities/" class="breadcrumb-link">Cities</a>
+    </li>
+    {{- else if ne .Section "" -}}
+    <li class="breadcrumb-item">
+      <a href="{{ .Site.BaseURL }}{{ .Section }}/" class="breadcrumb-link">{{ .Section | title }}</a>
+    </li>
+    {{- end -}}
+    
+    {{- if not .IsSection -}}
+    <li class="breadcrumb-item breadcrumb-current" aria-current="page">
+      <span>{{ .Title }}</span>
+    </li>
+    {{- end -}}
+  </ol>
+</nav>
+{{- end -}}

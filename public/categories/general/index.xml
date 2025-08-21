@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>General on 48 Hours – City Guides for Fast Trips</title>
-    <link>https://kylejones200.github.io/48_hours/categories/general/</link>
+    <link>http://localhost:1313/48_hours/categories/general/</link>
     <description>Recent content in General on 48 Hours – City Guides for Fast Trips</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 18 Aug 2025 13:32:03 -0500</lastBuildDate>
-    <atom:link href="https://kylejones200.github.io/48_hours/categories/general/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/48_hours/categories/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Skiing Sunlight Mountain, CO</title>
-      <link>https://kylejones200.github.io/48_hours/posts/sunlight/</link>
+      <link>http://localhost:1313/48_hours/posts/sunlight/</link>
       <pubDate>Mon, 18 Aug 2025 13:32:03 -0500</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/posts/sunlight/</guid>
+      <guid>http://localhost:1313/48_hours/posts/sunlight/</guid>
       <description>A friendly, no‑frills ski day at Sunlight Mountain with easy logistics, sunset glow, local vibe, and hot‑springs après in Glenwood Springs.</description>
     </item>
   </channel>

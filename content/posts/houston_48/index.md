@@ -13,6 +13,23 @@ cover:
 
 Houston is big. Museums cluster in one district, barbecue lines form across the city, and space history lives at NASA. In two days you can walk through art tunnels, stand among butterflies, and eat smoked brisket that rivals anywhere in Texas.
 
+{{< city-map id="houston-map" city="Houston" lat="29.7604" lng="-95.3698" zoom="11" height="450px" >}}
+
+{{< map-location map="houston-map" type="attraction" name="Children's Museum of Houston" lat="29.7217" lng="-95.3850" description="Interactive exhibits for kids with building and science challenges" day="1" >}}
+
+{{< map-location map="houston-map" type="attraction" name="Houston Zoo" lat="29.7155" lng="-95.3900" description="Leading zoo with elephants, big cats, and primate exhibits" day="1" >}}
+
+{{< map-location map="houston-map" type="attraction" name="Museum of Fine Arts Houston" lat="29.7256" lng="-95.3906" description="Global art collection with James Turrell light tunnels" day="1" >}}
+
+{{< map-location map="houston-map" type="attraction" name="Houston Museum of Natural Science" lat="29.7220" lng="-95.3895" description="Natural history museum with butterflies and Fabergé collection" day="1" >}}
+
+{{< map-location map="houston-map" type="attraction" name="Johnson Space Center" lat="29.5502" lng="-95.0976" description="NASA's mission control and space history exhibits" day="2" >}}
+
+{{< map-location map="houston-map" type="restaurant" name="Franklin Barbecue" lat="29.7604" lng="-95.3698" description="Famous Texas barbecue with smoked brisket" day="2" >}}
+
+{{< map-route map="houston-map" day="1" color="#E91E63" >}}
+{{< map-route map="houston-map" day="2" color="#9C27B0" >}}
+
 ## Day 1: Museums and Barbecue
 
 **Children’s Museum**

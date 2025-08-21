@@ -1,0 +1,51 @@
+{{- $mapId := .Get "map" | default "city-map" -}}
+{{- $type := .Get "type" -}}
+{{- $name := .Get "name" -}}
+{{- $lat := .Get "lat" -}}
+{{- $lng := .Get "lng" -}}
+{{- $description := .Get "description" -}}
+{{- $day := .Get "day" -}}
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Wait for map to be initialized
+  const checkMap = setInterval(function() {
+    if (window.cityMaps && window.cityMaps['{{ $mapId }}']) {
+      const mapData = window.cityMaps['{{ $mapId }}'];
+      const map = mapData.map;
+      const icons = mapData.icons;
+      
+      // Add marker
+      const marker = L.marker([{{ $lat }}, {{ $lng }}], {
+        icon: icons['{{ $type }}'] || icons.attraction
+      }).addTo(map);
+      
+      // Add popup
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${'{{ $name }}'}</h4>
+          <p>${'{{ $description }}'}</p>
+          {{- if $day }}
+          <span class="day-badge day-{{ $day }}">Day {{ $day }}</span>
+          {{- end }}
+        </div>
+      `);
+      
+      // Store location for route building
+      if (!window.cityMaps['{{ $mapId }}'].locations) {
+        window.cityMaps['{{ $mapId }}'].locations = [];
+      }
+      window.cityMaps['{{ $mapId }}'].locations.push({
+        name: '{{ $name }}',
+        lat: {{ $lat }},
+        lng: {{ $lng }},
+        type: '{{ $type }}',
+        day: '{{ $day }}',
+        marker: marker
+      });
+      
+      clearInterval(checkMap);
+    }
+  }, 100);
+});
+</script>

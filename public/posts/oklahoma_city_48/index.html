@@ -1,135 +1,873 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>48 Hours in Oklahoma City, OK | 48 Hours – City Guides for Fast Trips</title>
-<meta name="keywords" content="oklahoma-city">
-<meta name="description" content="Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.">
-<meta name="author" content="">
-<link rel="canonical" href="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/">
-<link crossorigin="anonymous" href="/48_hours/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://kylejones200.github.io/48_hours/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://kylejones200.github.io/48_hours/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://kylejones200.github.io/48_hours/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://kylejones200.github.io/48_hours/apple-touch-icon.png">
-<link rel="mask-icon" href="https://kylejones200.github.io/48_hours/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<head><script src="/48_hours/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=48_hours/livereload" data-no-instant defer></script>
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CX9KZPX6X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0CX9KZPX6X');
-</script>
-<meta property="og:url" content="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/">
-  <meta property="og:site_name" content="48 Hours – City Guides for Fast Trips">
-  <meta property="og:title" content="48 Hours in Oklahoma City, OK">
-  <meta property="og:description" content="Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-18T13:32:03-05:00">
-    <meta property="article:modified_time" content="2025-08-18T13:32:03-05:00">
-    <meta property="article:tag" content="Oklahoma-City">
-    <meta property="og:image" content="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/cover.jpg">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/cover.jpg">
-<meta name="twitter:title" content="48 Hours in Oklahoma City, OK">
-<meta name="twitter:description" content="Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://kylejones200.github.io/48_hours/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "48 Hours in Oklahoma City, OK",
-      "item": "https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/"
-    }
-  ]
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+
+<style>
+.city-map {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-</script>
+
+.custom-div-icon {
+  background: transparent;
+  border: none;
+}
+
+.map-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.map-marker:hover {
+  transform: scale(1.1);
+}
+
+.hotel-marker {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.restaurant-marker {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.attraction-marker {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+.map-popup {
+  font-family: var(--font-family);
+}
+
+.map-popup h4 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.map-popup p {
+  margin: 0 0 8px 0;
+  color: var(--content);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.day-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.day-1 {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+}
+
+.day-2 {
+  background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+}
+
+.route-controls {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.route-toggle {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.route-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--content);
+  cursor: pointer;
+}
+
+.route-toggle input[type="checkbox"] {
+  margin: 0;
+}
+
+ 
+.leaflet-popup-content-wrapper {
+  background: var(--entry);
+  color: var(--content);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.leaflet-popup-tip {
+  background: var(--entry);
+}
+
+ 
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+ 
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+  .leaflet-control-attribution {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+  
+  .leaflet-control-attribution a {
+    color: #4CAF50;
+  }
+}
+
+ 
+@media (max-width: 768px) {
+  .city-map {
+    height: 300px !important;
+    margin: 1rem 0;
+  }
+  
+  .route-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .map-marker {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+</style>
+
+
+
+
+<style>
+ 
+.breadcrumbs {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.breadcrumb-link {
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--content);
+  text-decoration: underline;
+}
+
+.breadcrumb-current {
+  color: var(--content);
+  font-weight: 500;
+}
+
+ 
+.optimized-image {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.responsive-image:hover {
+  transform: translateY(-2px);
+}
+
+ 
+.weather-widget {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 24px rgba(116, 185, 255, 0.3);
+}
+
+.weather-header h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.weather-loading {
+  text-align: center;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.weather-forecast {
+  margin-top: 1rem;
+}
+
+.forecast-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-day {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.temperature {
+  margin: 0.5rem 0;
+}
+
+.temp-high {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.temp-low {
+  opacity: 0.8;
+  margin-left: 0.25rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.demo-notice {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.weather-error {
+  text-align: center;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+ 
+.city-overview {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.city-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.city-stat {
+  text-align: center;
+  padding: 1rem;
+  background: var(--theme);
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.content-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-title a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: var(--primary);
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.card-summary {
+  line-height: 1.6;
+  color: var(--content);
+}
+
+ 
+@media (max-width: 768px) {
+  .breadcrumbs {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  
+  .breadcrumb-list {
+    font-size: 0.8rem;
+    gap: 0.25rem;
+  }
+  
+  .forecast-days {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .forecast-day {
+    padding: 0.75rem 0.25rem;
+  }
+  
+  .weather-icon {
+    font-size: 1.5rem;
+  }
+  
+  .city-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+</style>
+
+
+<style>
+ 
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin: 0.5rem 0;
+}
+
+.reading-time-icon {
+  font-size: 1rem;
+}
+
+.word-count {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+ 
+.tag-filters {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tag-filters h3 {
+  margin: 0 0 1rem 0;
+  color: var(--content);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--border);
+  background: var(--theme);
+  color: var(--content);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.filtered-content {
+  margin: 2rem 0;
+}
+
+.city-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.card-content h3 a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.card-content h3 a:hover {
+  color: var(--primary);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.card-summary {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--content);
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+ 
+.related-cities {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.related-cities h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--content);
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.related-card {
+  background: var(--theme);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.related-image {
+  height: 120px;
+  overflow: hidden;
+}
+
+.related-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-content {
+  padding: 1rem;
+}
+
+.related-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.related-content h4 a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.related-content h4 a:hover {
+  color: var(--primary);
+}
+
+.related-summary {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.related-meta {
+  font-size: 0.8rem;
+}
+
+.view-all {
+  text-align: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.view-all-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+ 
+.social-sharing {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.social-sharing h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.share-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.share-icon {
+  font-size: 1.1rem;
+}
+
+.share-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+ 
+.print-guide {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--entry);
+  border: 2px solid var(--border);
+  color: var(--content);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.print-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.print-icon {
+  font-size: 1.1rem;
+}
+
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ 
+@media (max-width: 768px) {
+  .card-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card-image {
+    height: 150px;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .share-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .share-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}
+</style>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "48 Hours in Oklahoma City, OK",
+  "@type": "TravelGuide",
   "name": "48 Hours in Oklahoma City, OK",
   "description": "Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.",
-  "keywords": [
-    "oklahoma-city"
-  ],
-  "articleBody": "Oklahoma City mixes modern energy with deep history. In two days you can stay in a historic landmark hotel and see the city’s biggest events in a state-of-the-art arena.\nWhere to Stay: The National Hotel The National Hotel stands inside a former First National Bank skyscraper. The building dates to 1931, and its Art Deco design dominates downtown with carved stone, murals, and brass fixtures. The restoration turned the bank’s grand lobby into a soaring space filled with marble, gold leaf, and murals overhead. Walking into the hotel feels like stepping into the height of the oil boom.\nRooms keep the Art Deco feel but layer in modern design. The lobby bar and restaurants serve craft cocktails and upscale takes on regional food. You can stay here and feel both the history of Oklahoma City and the pace of its revival.\nPaycom Center A short walk away sits the Paycom Center, home to the Oklahoma City Thunder. The arena holds over 18,000 fans, and on game nights the energy surges through downtown. The noise swells, the crowd roars, and the team anchors civic pride. Beyond basketball, the Paycom Center hosts major concerts and touring shows, so you might see NBA action one night and live music the next.\nInside, wide concourses circle the floor, with Oklahoma food stands and plenty of seating. Outside, the arena lights up with banners and fans streaming in. If the National Hotel shows the city’s history, the Paycom Center shows its pulse right now.\nWhy 48 Hours Works Stay in the National Hotel, eat and drink in its restored bank lobby, then walk to the Paycom Center for a game or concert. That mix of historic glamour and modern energy captures Oklahoma City’s identity. Two days give you both: past and present tied by a short walk downtown.\n",
-  "wordCount" : "303",
-  "inLanguage": "en",
-  "image":"https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/cover.jpg","datePublished": "2025-08-18T13:32:03-05:00",
+  "url": "http:\/\/localhost:1313\/48_hours\/posts\/oklahoma_city_48\/",
+  "datePublished": "2025-08-18T13:32:03-05:00",
   "dateModified": "2025-08-18T13:32:03-05:00",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/"
+  "author": {
+    "@type": "Organization",
+    "name": "48 Hours",
+    "url": "http:\/\/localhost:1313\/48_hours\/"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "48 Hours – City Guides for Fast Trips",
+    "name": "48 Hours",
+    "url": "http:\/\/localhost:1313\/48_hours\/",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://kylejones200.github.io/48_hours/favicon.ico"
+      "url": "http:\/\/localhost:1313\/48_hours\/images/logo.png"
     }
+  },
+  "image": {
+    "@type": "ImageObject",
+    "url": "http:\/\/localhost:1313\/48_hours\/posts\/oklahoma_city_48\/cover.jpg",
+    "caption": "48 Hours in Oklahoma City, OK"
+  },
+  "about": {
+    "@type": "City",
+    "name": "Oklahoma-City",
+    "description": "Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend."
+  },
+  "itinerary": {
+    "@type": "TouristTrip",
+    "name": "48 Hours in Oklahoma City, OK",
+    "description": "Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.",
+    "touristType": "leisure"
+  },
+  "keywords": ["oklahoma-city"],
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/localhost:1313\/48_hours\/posts\/oklahoma_city_48\/"
   }
 }
 </script>
+
 </head>
 
 <body class="" id="top">
@@ -147,7 +885,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kylejones200.github.io/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
+            <a href="http://localhost:1313/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -173,27 +911,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://kylejones200.github.io/48_hours/" title="Home">
+                <a href="http://localhost:1313/48_hours/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/cities/" title="Cities">
+                <a href="http://localhost:1313/48_hours/cities/" title="Cities">
                     <span>Cities</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/about/" title="About">
+                <a href="http://localhost:1313/48_hours/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/resources/" title="Resources">
+                <a href="http://localhost:1313/48_hours/resources/" title="Resources">
                     <span>Resources</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/work/" title="Work With Me">
+                <a href="http://localhost:1313/48_hours/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/48_hours/work/" title="Work With Me">
                     <span>Work With Me</span>
                 </a>
             </li>
@@ -204,7 +947,19 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://kylejones200.github.io/48_hours/">Home</a>&nbsp;»&nbsp;<a href="https://kylejones200.github.io/48_hours/posts/">Posts</a></div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1313/48_hours/" class="breadcrumb-link">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="http://localhost:1313/48_hours/cities/" class="breadcrumb-link">Cities</a>
+    </li><li class="breadcrumb-item breadcrumb-current" aria-current="page">
+      <span>48 Hours in Oklahoma City, OK</span>
+    </li></ol>
+</nav>
     <h1 class="post-title entry-hint-parent">
       48 Hours in Oklahoma City, OK
     </h1>
@@ -213,10 +968,325 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="https://kylejones200.github.io/48_hours/cover.jpg" alt="48 Hours in Oklahoma City, OK">
+        <img loading="eager" src="http://localhost:1313/48_hours/cover.jpg" alt="48 Hours in Oklahoma City, OK">
         
 </figure>
-  <div class="post-content"><p>Oklahoma City mixes modern energy with deep history. In two days you can stay in a historic landmark hotel and see the city’s biggest events in a state-of-the-art arena.</p>
+  <div class="post-content"><p>Oklahoma City mixes modern energy with deep history. In two days you can stay in a historic landmark hotel and see the city&rsquo;s biggest events in a state-of-the-art arena.</p>
+<div id="okc-map" class="city-map" style="height: 450px; margin: 2rem 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const map"Okc-Map" = L.map('okc-map').setView(["35.4676", "-97.5164"], "14");
+  
+  
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map"Okc-Map");
+
+  
+  const hotelIcon = L.divIcon({
+    html: '<div class="map-marker hotel-marker">🏨</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  const restaurantIcon = L.divIcon({
+    html: '<div class="map-marker restaurant-marker">🍽️</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  const attractionIcon = L.divIcon({
+    html: '<div class="map-marker attraction-marker">📍</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  
+  window.cityMaps = window.cityMaps || {};
+  window.cityMaps['okc-map'] = {
+    map: map"Okc-Map",
+    icons: { hotel: hotelIcon, restaurant: restaurantIcon, attraction: attractionIcon },
+    routes: { day1: null, day2: null }
+  };
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const checkMap = setInterval(function() {
+    if (window.cityMaps && window.cityMaps['okc-map']) {
+      const mapData = window.cityMaps['okc-map'];
+      const map = mapData.map;
+      const icons = mapData.icons;
+      
+      
+      const marker = L.marker(["35.4676", "-97.5164"], {
+        icon: icons['hotel'] || icons.attraction
+      }).addTo(map);
+      
+      
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${'The National Hotel'}</h4>
+          <p>${'Historic Art Deco hotel in former First National Bank building from 1931'}</p>
+          <span class="day-badge day-1">Day 1</span>
+        </div>
+      `);
+      
+      
+      if (!window.cityMaps['okc-map'].locations) {
+        window.cityMaps['okc-map'].locations = [];
+      }
+      window.cityMaps['okc-map'].locations.push({
+        name: 'The National Hotel',
+        lat: "35.4676",
+        lng: "-97.5164",
+        type: 'hotel',
+        day: '1',
+        marker: marker
+      });
+      
+      clearInterval(checkMap);
+    }
+  }, 100);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const checkMap = setInterval(function() {
+    if (window.cityMaps && window.cityMaps['okc-map']) {
+      const mapData = window.cityMaps['okc-map'];
+      const map = mapData.map;
+      const icons = mapData.icons;
+      
+      
+      const marker = L.marker(["35.4634", "-97.5151"], {
+        icon: icons['attraction'] || icons.attraction
+      }).addTo(map);
+      
+      
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${'Paycom Center'}</h4>
+          <p>${'Home of Oklahoma City Thunder, hosts NBA games and major concerts'}</p>
+          <span class="day-badge day-2">Day 2</span>
+        </div>
+      `);
+      
+      
+      if (!window.cityMaps['okc-map'].locations) {
+        window.cityMaps['okc-map'].locations = [];
+      }
+      window.cityMaps['okc-map'].locations.push({
+        name: 'Paycom Center',
+        lat: "35.4634",
+        lng: "-97.5151",
+        type: 'attraction',
+        day: '2',
+        marker: marker
+      });
+      
+      clearInterval(checkMap);
+    }
+  }, 100);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  const checkMap = setInterval(function() {
+    if (window.cityMaps && window.cityMaps['okc-map']) {
+      const mapData = window.cityMaps['okc-map'];
+      const map = mapData.map;
+      const icons = mapData.icons;
+      
+      
+      const marker = L.marker(["35.4700", "-97.5200"], {
+        icon: icons['attraction'] || icons.attraction
+      }).addTo(map);
+      
+      
+      marker.bindPopup(`
+        <div class="map-popup">
+          <h4>${'Horseshoe Museum'}</h4>
+          <p>${'Niche museum celebrating horseshoe craft and folklore'}</p>
+          <span class="day-badge day-2">Day 2</span>
+        </div>
+      `);
+      
+      
+      if (!window.cityMaps['okc-map'].locations) {
+        window.cityMaps['okc-map'].locations = [];
+      }
+      window.cityMaps['okc-map'].locations.push({
+        name: 'Horseshoe Museum',
+        lat: "35.4700",
+        lng: "-97.5200",
+        type: 'attraction',
+        day: '2',
+        marker: marker
+      });
+      
+      clearInterval(checkMap);
+    }
+  }, 100);
+});
+</script>
+
+<p><script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  setTimeout(function() {
+    if (window.cityMaps && window.cityMaps['okc-map'] && window.cityMaps['okc-map'].locations) {
+      const mapData = window.cityMaps['okc-map'];
+      const map = mapData.map;
+      const locations = mapData.locations;
+      
+      
+      const dayLocations = locations.filter(loc => loc.day === '1');
+      
+      if (dayLocations.length > 1) {
+        
+        const routeCoords = dayLocations.map(loc => [loc.lat, loc.lng]);
+        
+        
+        if (mapData.routes['day1']) {
+          map.removeLayer(mapData.routes['day1']);
+        }
+        
+        
+        const route = L.polyline(routeCoords, {
+          color: '#E91E63',
+          weight: 4,
+          opacity: 0.7,
+          dashArray: '10, 5'
+        }).addTo(map);
+        
+        
+        mapData.routes['day1'] = route;
+        
+        
+        if (!document.getElementById('route-controls-okc-map')) {
+          const controlsDiv = document.createElement('div');
+          controlsDiv.id = 'route-controls-okc-map';
+          controlsDiv.className = 'route-controls';
+          controlsDiv.innerHTML = `
+            <div class="route-toggle">
+              <label><input type="checkbox" id="day1-okc-map" checked> Day 1 Route</label>
+              <label><input type="checkbox" id="day2-okc-map" checked> Day 2 Route</label>
+            </div>
+          `;
+          document.getElementById('okc-map').parentNode.insertBefore(controlsDiv, document.getElementById('okc-map').nextSibling);
+          
+          
+          document.getElementById('day1-okc-map').addEventListener('change', function() {
+            if (mapData.routes.day1) {
+              if (this.checked) {
+                mapData.routes.day1.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day1);
+              }
+            }
+          });
+          
+          document.getElementById('day2-okc-map').addEventListener('change', function() {
+            if (mapData.routes.day2) {
+              if (this.checked) {
+                mapData.routes.day2.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day2);
+              }
+            }
+          });
+        }
+      }
+    }
+  }, 1000);
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  setTimeout(function() {
+    if (window.cityMaps && window.cityMaps['okc-map'] && window.cityMaps['okc-map'].locations) {
+      const mapData = window.cityMaps['okc-map'];
+      const map = mapData.map;
+      const locations = mapData.locations;
+      
+      
+      const dayLocations = locations.filter(loc => loc.day === '2');
+      
+      if (dayLocations.length > 1) {
+        
+        const routeCoords = dayLocations.map(loc => [loc.lat, loc.lng]);
+        
+        
+        if (mapData.routes['day2']) {
+          map.removeLayer(mapData.routes['day2']);
+        }
+        
+        
+        const route = L.polyline(routeCoords, {
+          color: '#9C27B0',
+          weight: 4,
+          opacity: 0.7,
+          dashArray: '10, 5'
+        }).addTo(map);
+        
+        
+        mapData.routes['day2'] = route;
+        
+        
+        if (!document.getElementById('route-controls-okc-map')) {
+          const controlsDiv = document.createElement('div');
+          controlsDiv.id = 'route-controls-okc-map';
+          controlsDiv.className = 'route-controls';
+          controlsDiv.innerHTML = `
+            <div class="route-toggle">
+              <label><input type="checkbox" id="day1-okc-map" checked> Day 1 Route</label>
+              <label><input type="checkbox" id="day2-okc-map" checked> Day 2 Route</label>
+            </div>
+          `;
+          document.getElementById('okc-map').parentNode.insertBefore(controlsDiv, document.getElementById('okc-map').nextSibling);
+          
+          
+          document.getElementById('day1-okc-map').addEventListener('change', function() {
+            if (mapData.routes.day1) {
+              if (this.checked) {
+                mapData.routes.day1.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day1);
+              }
+            }
+          });
+          
+          document.getElementById('day2-okc-map').addEventListener('change', function() {
+            if (mapData.routes.day2) {
+              if (this.checked) {
+                mapData.routes.day2.addTo(map);
+              } else {
+                map.removeLayer(mapData.routes.day2);
+              }
+            }
+          });
+        }
+      }
+    }
+  }, 1000);
+});
+</script>
+</p>
 <h2 id="where-to-stay-the-national-hotel">Where to Stay: The National Hotel<a hidden class="anchor" aria-hidden="true" href="#where-to-stay-the-national-hotel">#</a></h2>
 <p>The National Hotel stands inside a former First National Bank skyscraper. The building dates to 1931, and its Art Deco design dominates downtown with carved stone, murals, and brass fixtures. The restoration turned the bank’s grand lobby into a soaring space filled with marble, gold leaf, and murals overhead. Walking into the hotel feels like stepping into the height of the oil boom.</p>
 <p>Rooms keep the Art Deco feel but layer in modern design. The lobby bar and restaurants serve craft cocktails and upscale takes on regional food. You can stay here and feel both the history of Oklahoma City and the pace of its revival.</p>
@@ -225,21 +1295,46 @@
 <p>Inside, wide concourses circle the floor, with Oklahoma food stands and plenty of seating. Outside, the arena lights up with banners and fans streaming in. If the National Hotel shows the city’s history, the Paycom Center shows its pulse right now.</p>
 <h2 id="why-48-hours-works">Why 48 Hours Works<a hidden class="anchor" aria-hidden="true" href="#why-48-hours-works">#</a></h2>
 <p>Stay in the National Hotel, eat and drink in its restored bank lobby, then walk to the Paycom Center for a game or concert. That mix of historic glamour and modern energy captures Oklahoma City’s identity. Two days give you both: past and present tied by a short walk downtown.</p>
+<h2 id="looking-for-something-off-the-beaten-path">Looking for something off the beaten path?<a hidden class="anchor" aria-hidden="true" href="#looking-for-something-off-the-beaten-path">#</a></h2>
+<p><strong>Horseshoe Museum (Oklahoma)</strong>
+This niche spot celebrates the humble horseshoe, both tool and talisman. Displays cover the craft of farriers and the symbolic power of horseshoes in folklore.
+The museum has an old-world feel and makes a quick stop if you’re already nearby. It’s a place where you come away with a new respect for something you’ve stepped over a thousand times.</p>
+<p><em>Practical info:</em> Small, local, and often run by volunteers — check hours before you go. Admission is usually free or by donation. Best paired with other stops nearby.</p>
+<p><strong>American Pigeon Museum &amp; Library (Oklahoma City)</strong>
+Who knew pigeons had such a résumé? This free museum shows their starring role in wartime communication and as loyal homing messengers. A few live birds keep watch over the exhibits.
+You’ll find yourself impressed by the artwork, photos, and quirky pigeon memorabilia. It’s a light, unusual stop — and kids love seeing the birds up close.
+<em>Practical info:</em> Open Friday–Sunday, free entry (suggested donation $5). It’s a 15-minute drive north of downtown. Great with kids. Website: <a href="https://www.theamericanpigeonmuseum.org">theamericanpigeonmuseum.org</a>.</p>
+<p><strong>American Banjo Museum (Oklahoma City)</strong>
+More than 300 banjos line the walls here, from Civil War-era relics to flashy jazz-age instruments. It’s the world’s largest public banjo collection.
+Interactive displays let you hear how the banjo moved through jazz, folk, and bluegrass. It’s a lively place, and you leave humming.</p>
+<p><em>Practical info:</em> Open Tue–Sat 11–6, Sun 12–5. Adults $8. In Bricktown, walking distance from downtown hotels. Website: <a href="https://americanbanjomuseum.com">americanbanjomuseum.com</a>.</p>
+<p><strong>Oklahoma History Center (Oklahoma City)</strong>
+This broad-ranging museum covers Native culture, pioneer life, aviation, and oil. It sits on 18 acres next to the state capitol.
+The exhibits balance scholarship with hands-on displays. It’s easy to lose a half day here if you follow every thread.
+<em>Practical info:</em> Open Mon–Sat 10–5. Adults $12. Parking is free and plentiful. Website: <a href="https://www.okhistory.org/historycenter">okhistory.org/historycenter</a>.</p>
+<p><strong>Oklahoma Hall of Fame (Oklahoma City)</strong>
+This downtown museum celebrates Oklahomans who made their mark in sports, business, arts, and civic life. Exhibits mix portraits, multimedia, and interactive stations.
+The stories make state history feel personal. Kids especially like the hands-on features, while locals come to see familiar names honored.
+<em>Practical info:</em> Open Tue–Sat 10–5. Adults $10. Located in the historic Mid-Town district. Website: <a href="https://www.oklahomahof.com">oklahomahof.com</a>.</p>
+<p><strong>Science Museum Oklahoma (Oklahoma City)</strong>
+This sprawling hands-on science center keeps kids busy with experiments, tinkering zones, and the state-of-the-art planetarium.
+It’s more than a rainy-day fallback — locals treat it as an all-day adventure. Science Live shows pack in plenty of fizz and bang.</p>
+<p><em>Practical info:</em> Open daily 9–5. Adults $20. Big free parking lot. Website: <a href="https://www.sciencemuseumok.org">sciencemuseumok.org</a>.</p>
 
 
   </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://kylejones200.github.io/48_hours/tags/oklahoma-city/">Oklahoma-City</a></li>
+      <li><a href="http://localhost:1313/48_hours/tags/oklahoma-city/">Oklahoma-City</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="https://kylejones200.github.io/48_hours/posts/memphis_48/">
+  <a class="prev" href="http://localhost:1313/48_hours/posts/memphis_48/">
     <span class="title">« Prev</span>
     <br>
     <span>48 Hours in Memphis</span>
   </a>
-  <a class="next" href="https://kylejones200.github.io/48_hours/posts/europe/paris/">
+  <a class="next" href="http://localhost:1313/48_hours/posts/europe/paris/">
     <span class="title">Next »</span>
     <br>
     <span>48 Hours in Paris</span>
@@ -251,7 +1346,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://kylejones200.github.io/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
 
     <span>
         Powered by

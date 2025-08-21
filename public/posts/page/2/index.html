@@ -1,95 +1,1090 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto">
 
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Posts | 48 Hours – City Guides for Fast Trips</title>
-<meta name="keywords" content="">
-<meta name="description" content="Posts - 48 Hours – City Guides for Fast Trips">
-<meta name="author" content="">
-<link rel="canonical" href="https://kylejones200.github.io/48_hours/posts/">
-<link crossorigin="anonymous" href="/48_hours/assets/css/stylesheet.8fe10233a706bc87f2e08b3cf97b8bd4c0a80f10675a143675d59212121037c0.css" integrity="sha256-j&#43;ECM6cGvIfy4Is8&#43;XuL1MCoDxBnWhQ2ddWSEhIQN8A=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://kylejones200.github.io/48_hours/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://kylejones200.github.io/48_hours/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://kylejones200.github.io/48_hours/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://kylejones200.github.io/48_hours/apple-touch-icon.png">
-<link rel="mask-icon" href="https://kylejones200.github.io/48_hours/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://kylejones200.github.io/48_hours/posts/index.xml">
-<link rel="alternate" hreflang="en" href="https://kylejones200.github.io/48_hours/posts/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
+<head><script src="/48_hours/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=48_hours/livereload" data-no-instant defer></script>
 
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
 
-            .list {
-                background: var(--theme);
-            }
 
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
 
-    </style>
-</noscript>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0CX9KZPX6X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<style>
+.city-map {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-  gtag('config', 'G-0CX9KZPX6X');
-</script>
-<meta property="og:url" content="https://kylejones200.github.io/48_hours/posts/">
-  <meta property="og:site_name" content="48 Hours – City Guides for Fast Trips">
-  <meta property="og:title" content="Posts">
-  <meta property="og:description" content="City guides in 48 hours.">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="City guides in 48 hours.">
+.custom-div-icon {
+  background: transparent;
+  border: none;
+}
 
+.map-marker {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.map-marker:hover {
+  transform: scale(1.1);
+}
+
+.hotel-marker {
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+
+.restaurant-marker {
+  background: linear-gradient(135deg, #FF9800, #F57C00);
+}
+
+.attraction-marker {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+}
+
+.map-popup {
+  font-family: var(--font-family);
+}
+
+.map-popup h4 {
+  margin: 0 0 8px 0;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.map-popup p {
+  margin: 0 0 8px 0;
+  color: var(--content);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.day-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.day-1 {
+  background: linear-gradient(135deg, #E91E63, #C2185B);
+}
+
+.day-2 {
+  background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+}
+
+.route-controls {
+  margin-top: 12px;
+  padding: 12px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.route-toggle {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.route-toggle label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--content);
+  cursor: pointer;
+}
+
+.route-toggle input[type="checkbox"] {
+  margin: 0;
+}
+
+ 
+.leaflet-popup-content-wrapper {
+  background: var(--entry);
+  color: var(--content);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.leaflet-popup-tip {
+  background: var(--entry);
+}
+
+ 
+.leaflet-interactive {
+  cursor: pointer;
+}
+
+ 
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.8);
+  font-size: 11px;
+}
+
+ 
+@media (prefers-color-scheme: dark) {
+  .leaflet-control-attribution {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+  }
+  
+  .leaflet-control-attribution a {
+    color: #4CAF50;
+  }
+}
+
+ 
+@media (max-width: 768px) {
+  .city-map {
+    height: 300px !important;
+    margin: 1rem 0;
+  }
+  
+  .route-toggle {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .map-marker {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+  }
+}
+</style>
+
+
+
+
+<style>
+ 
+.breadcrumbs {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "›";
+  margin-left: 0.5rem;
+  color: var(--secondary);
+  font-weight: bold;
+}
+
+.breadcrumb-link {
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.breadcrumb-link:hover {
+  color: var(--content);
+  text-decoration: underline;
+}
+
+.breadcrumb-current {
+  color: var(--content);
+  font-weight: 500;
+}
+
+ 
+.optimized-image {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.responsive-image:hover {
+  transform: translateY(-2px);
+}
+
+ 
+.weather-widget {
+  background: linear-gradient(135deg, #74b9ff, #0984e3);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 24px rgba(116, 185, 255, 0.3);
+}
+
+.weather-header h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.weather-loading {
+  text-align: center;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.weather-forecast {
+  margin-top: 1rem;
+}
+
+.forecast-days {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.forecast-day {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem 0.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-icon {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.temperature {
+  margin: 0.5rem 0;
+}
+
+.temp-high {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.temp-low {
+  opacity: 0.8;
+  margin-left: 0.25rem;
+}
+
+.description {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  text-transform: capitalize;
+}
+
+.demo-notice {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.weather-error {
+  text-align: center;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+ 
+.city-overview {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.city-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.city-stat {
+  text-align: center;
+  padding: 1rem;
+  background: var(--theme);
+  border-radius: 8px;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-top: 0.25rem;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.content-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+}
+
+.content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card-title a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.card-title a:hover {
+  color: var(--primary);
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+
+.card-summary {
+  line-height: 1.6;
+  color: var(--content);
+}
+
+ 
+@media (max-width: 768px) {
+  .breadcrumbs {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+  }
+  
+  .breadcrumb-list {
+    font-size: 0.8rem;
+    gap: 0.25rem;
+  }
+  
+  .forecast-days {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 0.5rem;
+  }
+  
+  .forecast-day {
+    padding: 0.75rem 0.25rem;
+  }
+  
+  .weather-icon {
+    font-size: 1.5rem;
+  }
+  
+  .city-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  
+  .content-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+</style>
+
+
+<style>
+ 
+.reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+  margin: 0.5rem 0;
+}
+
+.reading-time-icon {
+  font-size: 1rem;
+}
+
+.word-count {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+ 
+.tag-filters {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.tag-filters h3 {
+  margin: 0 0 1rem 0;
+  color: var(--content);
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--border);
+  background: var(--theme);
+  color: var(--content);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.filter-btn:hover {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.filtered-content {
+  margin: 2rem 0;
+}
+
+.city-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+  border-color: var(--primary);
+}
+
+.card-header {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.card-image {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.card-content h3 a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.card-content h3 a:hover {
+  color: var(--primary);
+}
+
+.card-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.card-summary {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: var(--content);
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background: var(--primary);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+
+ 
+.related-cities {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 3rem 0;
+}
+
+.related-cities h3 {
+  margin: 0 0 1.5rem 0;
+  color: var(--content);
+  text-align: center;
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.related-card {
+  background: var(--theme);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.related-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.related-image {
+  height: 120px;
+  overflow: hidden;
+}
+
+.related-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-content {
+  padding: 1rem;
+}
+
+.related-content h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.related-content h4 a {
+  color: var(--content);
+  text-decoration: none;
+}
+
+.related-content h4 a:hover {
+  color: var(--primary);
+}
+
+.related-summary {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+.related-meta {
+  font-size: 0.8rem;
+}
+
+.view-all {
+  text-align: center;
+}
+
+.view-all-btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  transition: all 0.2s ease;
+  font-weight: 500;
+}
+
+.view-all-btn:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+ 
+.social-sharing {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.social-sharing h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.share-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.share-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.share-icon {
+  font-size: 1.1rem;
+}
+
+.share-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+ 
+.print-guide {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.print-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--entry);
+  border: 2px solid var(--border);
+  color: var(--content);
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.print-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.print-icon {
+  font-size: 1.1rem;
+}
+
+ 
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ 
+@media (max-width: 768px) {
+  .card-header {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .card-image {
+    height: 150px;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+  
+  .related-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .share-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .share-btn {
+    width: 200px;
+    justify-content: center;
+  }
+}
+</style>
 
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://kylejones200.github.io/48_hours/posts/"
+  "@type": "TravelGuide",
+  "name": "Posts",
+  "description": "",
+  "url": "http:\/\/localhost:1313\/48_hours\/posts\/",
+  "datePublished": "2025-08-18T15:05:00-05:00",
+  "dateModified": "2025-08-18T15:05:00-05:00",
+  "author": {
+    "@type": "Organization",
+    "name": "48 Hours",
+    "url": "http:\/\/localhost:1313\/48_hours\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "48 Hours",
+    "url": "http:\/\/localhost:1313\/48_hours\/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "http:\/\/localhost:1313\/48_hours\/images/logo.png"
     }
-  ]
+  },
+  "about": {
+    "@type": "City",
+    "name": "",
+    "description": ""
+  },
+  "itinerary": {
+    "@type": "TouristTrip",
+    "name": "Posts",
+    "description": "",
+    "touristType": "leisure"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http:\/\/localhost:1313\/48_hours\/posts\/"
+  }
+}
+</script><script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Posts",
+  "description": "",
+  "url": "http:\/\/localhost:1313\/48_hours\/posts\/",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems":  21 ,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position":  1 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Washington, DC",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/washington_dc\/",
+          "description": "Smithsonian museums, pandas at the National Zoo, hands-on exhibits for kids, and the monuments that define America’s capital."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  2 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Glen Rose, TX",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/glen_rose\/",
+          "description": "Dinosaur tracks, wildlife safaris, riverside parks, and small-town museums in the \u0026lsquo;Dinosaur Capital of Texas.\u0026rsquo;"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  3 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "10 Days in Scotland",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/europe\/scotland\/",
+          "description": "Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  4 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "24 Hours in Guthrie, Oklahoma",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/guthrie\/",
+          "description": "Guthrie, OK."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  5 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "4 Days in Palm Springs with Kids",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/palm_springs\/",
+          "description": "Palm Springs mixes desert landscape with family-friendly attractions. In four days you can ride an aerial tramway into the mountains, visit museums and zoos, explore aviation history, and take a day trip to Joshua Tree National Park."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  6 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Austin, TX",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/austin_48\/",
+          "description": "A weekend guide to Austin\u0026rsquo;s food, music, and springs"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  7 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Bacharach",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/europe\/bacharach\/",
+          "description": "Bacharach sits on a sharp bend of the Rhine, framed by vineyards and medieval towers. The town feels frozen in time, with half-timbered houses, a ruined castle, and cobbled streets that look unchanged for centuries. Two days here give you river views, wine, and a slower rhythm."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  8 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Bentonville, AR",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/bentonville_48\/",
+          "description": "Weekend in Bentonville with Crystal Bridges art and trails, the Museum of Native American History, and a quirky detour to Rogers’ Daisy Airgun Museum."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  9 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Chicago, IL",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/chicago_48\/",
+          "description": "Two days of Chicago highlights: Art Institute, Millennium Park, river architecture tour, Museum of Science and Industry, Shedd, and food from The Purple Pig to the Aviary."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  10 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Dallas, TX",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/dallas\/",
+          "description": "Two days of  Dallas highlights."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  11 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Denver, CO",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/denver_48\/",
+          "description": "Stay at the Brown Palace, see the Denver Art Museum and Kirkland Museum, snack at Leven Deli, and dine farm‑to‑table—history, art, and food in two days."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  12 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Eureka Springs, AR",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/eureka_springs_48\/",
+          "description": "Haunted Crescent Hotel, vintage railway rides, winding shop streets, and folk‑art oddity Quigley’s Castle in a hillside Ozark town."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  13 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Frankfurt",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/europe\/frankfurt\/",
+          "description": "Frankfurt mixes old Germany with a skyline of glass towers. The city moves on finance, trade fairs, and Apfelwein. Two days give enough time to see medieval squares, museums on the river, and the markets that locals love."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  14 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Houston",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/houston_48\/",
+          "description": "Museum District, butterflies and Fabergé at HMNS, MFAH light tunnels, Bayou Bend, NASA’s Johnson Space Center, and barbecue runs across the city."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  15 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Luxembourg City",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/europe\/luxembourg\/",
+          "description": "Luxembourg City sits high above rivers and valleys, a fortress that became a crossroads. Old walls meet EU towers. Two days here mix history, food, and quiet walks in a compact capital."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  16 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Memphis",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/memphis_48\/",
+          "description": "Memphis offers history, culture, and tunes. You can live among legends here. We start with Graceland. Then we explore science, river lore, and quiet parks."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  17 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Oklahoma City, OK",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/oklahoma_city_48\/",
+          "description": "Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  18 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Paris",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/europe\/paris\/",
+          "description": "Paris sets the standard for beauty, food, and style. A short stay gives a taste of cafés, museums, and the city’s streets that feel like an open-air gallery. Two days let you walk along the Seine, climb the Eiffel Tower, and sit at a café terrace watching the city pass."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  19 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Tulsa, OK",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/tulsa_48\/",
+          "description": "A weekend guide to Tulsa’s hotels, food, coffee, and family fun"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  20 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "Skiing Sunlight Mountain, CO",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/sunlight\/",
+          "description": "A friendly, no‑frills ski day at Sunlight Mountain with easy logistics, sunset glow, local vibe, and hot‑springs après in Glenwood Springs."
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position":  21 ,
+        "item": {
+          "@type": "TravelGuide",
+          "name": "48 Hours in Atlanta",
+          "url": "http:\/\/localhost:1313\/48_hours\/posts\/atlanta_48\/",
+          "description": "Barbecue, whale sharks, Olympic grounds, and a downtown stay."
+        }
+      }]
+  }
 }
 </script>
+
 </head>
 
 <body class="list" id="top">
@@ -107,7 +1102,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://kylejones200.github.io/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
+            <a href="http://localhost:1313/48_hours/" accesskey="h" title="48 Hours – City Guides for Fast Trips (Alt + H)">48 Hours – City Guides for Fast Trips</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -133,27 +1128,32 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://kylejones200.github.io/48_hours/" title="Home">
+                <a href="http://localhost:1313/48_hours/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/cities/" title="Cities">
+                <a href="http://localhost:1313/48_hours/cities/" title="Cities">
                     <span>Cities</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/about/" title="About">
+                <a href="http://localhost:1313/48_hours/about/" title="About">
                     <span>About</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/resources/" title="Resources">
+                <a href="http://localhost:1313/48_hours/resources/" title="Resources">
                     <span>Resources</span>
                 </a>
             </li>
             <li>
-                <a href="https://kylejones200.github.io/48_hours/work/" title="Work With Me">
+                <a href="http://localhost:1313/48_hours/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/48_hours/work/" title="Work With Me">
                     <span>Work With Me</span>
                 </a>
             </li>
@@ -161,7 +1161,17 @@
     </nav>
 </header>
 <main class="main"> 
-<header class="page-header"><div class="breadcrumbs"><a href="https://kylejones200.github.io/48_hours/">Home</a></div>
+<header class="page-header"><nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol class="breadcrumb-list">
+    <li class="breadcrumb-item">
+      <a href="http://localhost:1313/48_hours/" class="breadcrumb-link">
+        <span>🏠</span>
+        <span>Home</span>
+      </a>
+    </li><li class="breadcrumb-item">
+      <a href="http://localhost:1313/48_hours/cities/" class="breadcrumb-link">Cities</a>
+    </li></ol>
+</nav>
   <h1>
     Posts
   </h1>
@@ -169,7 +1179,42 @@
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="https://kylejones200.github.io/48_hours/content/posts/luxembourg_48/PXL_20241011_161448577.jpg" alt="48 Hours in Luxembourg City">
+        <img loading="lazy" src="http://localhost:1313/48_hours/content/posts/memphis_48/PXL_20241011_161448577.jpg" alt="48 Hours in Frankfurt">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">48 Hours in Frankfurt
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Frankfurt mixes old Germany with a skyline of glass towers. The city moves on finance, trade fairs, and Apfelwein. Two days give enough time to see medieval squares, museums on the river, and the markets that locals love.</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 48 Hours in Frankfurt" href="http://localhost:1313/48_hours/posts/europe/frankfurt/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+            <img loading="lazy"
+                srcset='http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469_hu_bd4eb91915b3814b.jpg 360w,http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469_hu_c5ba50ad4364587c.jpg 480w,http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469_hu_5d82df7cbf4f528e.jpg 720w,http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469_hu_4e91ac4a8ba0b9e5.jpg 1080w,http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469_hu_6a4721fa809fc209.jpg 1500w,http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469.jpg 4032w'
+                src="http://localhost:1313/48_hours/posts/houston_48/PXL_20210306_142251469.jpg"
+                sizes="(min-width: 768px) 720px, 100vw"
+                width="4032" height="3024"
+                alt="48 Hours in Houston">
+</figure>
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">48 Hours in Houston
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Museum District, butterflies and Fabergé at HMNS, MFAH light tunnels, Bayou Bend, NASA’s Johnson Space Center, and barbecue runs across the city.</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to 48 Hours in Houston" href="http://localhost:1313/48_hours/posts/houston_48/"></a>
+</article>
+
+<article class="post-entry"> 
+<figure class="entry-cover">
+        <img loading="lazy" src="http://localhost:1313/48_hours/content/posts/luxembourg_48/PXL_20241011_161448577.jpg" alt="48 Hours in Luxembourg City">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">48 Hours in Luxembourg City
@@ -179,14 +1224,14 @@
     <p>Luxembourg City sits high above rivers and valleys, a fortress that became a crossroads. Old walls meet EU towers. Two days here mix history, food, and quiet walks in a compact capital.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Luxembourg City" href="https://kylejones200.github.io/48_hours/posts/europe/luxembourg/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Luxembourg City" href="http://localhost:1313/48_hours/posts/europe/luxembourg/"></a>
 </article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
-                srcset='https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_b65f849c8790d99f.jpg 360w,https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_18bca95ab3ad4c6d.jpg 480w,https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_e0943e19e16b99ae.jpg 720w,https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_d76fda9777110c08.jpg 1080w,https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_40d8b5e8df9075c1.jpg 1500w,https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577.jpg 4080w'
-                src="https://kylejones200.github.io/48_hours/posts/memphis_48/PXL_20241011_161448577.jpg"
+                srcset='http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_b65f849c8790d99f.jpg 360w,http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_18bca95ab3ad4c6d.jpg 480w,http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_e0943e19e16b99ae.jpg 720w,http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_d76fda9777110c08.jpg 1080w,http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577_hu_40d8b5e8df9075c1.jpg 1500w,http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577.jpg 4080w'
+                src="http://localhost:1313/48_hours/posts/memphis_48/PXL_20241011_161448577.jpg"
                 sizes="(min-width: 768px) 720px, 100vw"
                 width="4080" height="3072"
                 alt="48 Hours in Memphis">
@@ -199,12 +1244,12 @@
     <p>Memphis offers history, culture, and tunes. You can live among legends here. We start with Graceland. Then we explore science, river lore, and quiet parks.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Memphis" href="https://kylejones200.github.io/48_hours/posts/memphis_48/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Memphis" href="http://localhost:1313/48_hours/posts/memphis_48/"></a>
 </article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="https://kylejones200.github.io/48_hours/cover.jpg" alt="48 Hours in Oklahoma City, OK">
+        <img loading="lazy" src="http://localhost:1313/48_hours/cover.jpg" alt="48 Hours in Oklahoma City, OK">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">48 Hours in Oklahoma City, OK
@@ -214,7 +1259,7 @@
     <p>Stay in the Art Deco splendor of The National Hotel and walk to Paycom Center for NBA games or concerts—OKC’s history and present on one downtown weekend.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Oklahoma City, OK" href="https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Oklahoma City, OK" href="http://localhost:1313/48_hours/posts/oklahoma_city_48/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -226,12 +1271,12 @@
     <p>Paris sets the standard for beauty, food, and style. A short stay gives a taste of cafés, museums, and the city’s streets that feel like an open-air gallery. Two days let you walk along the Seine, climb the Eiffel Tower, and sit at a café terrace watching the city pass.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Paris" href="https://kylejones200.github.io/48_hours/posts/europe/paris/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Paris" href="http://localhost:1313/48_hours/posts/europe/paris/"></a>
 </article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="https://kylejones200.github.io/48_hours/cover.jpg" alt="48 Hours in Tulsa, OK">
+        <img loading="lazy" src="http://localhost:1313/48_hours/cover.jpg" alt="48 Hours in Tulsa, OK">
 </figure>
   <header class="entry-header">
     <h2 class="entry-hint-parent">48 Hours in Tulsa, OK
@@ -241,29 +1286,14 @@
     <p>A weekend guide to Tulsa’s hotels, food, coffee, and family fun</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Tulsa, OK" href="https://kylejones200.github.io/48_hours/posts/tulsa_48/"></a>
-</article>
-
-<article class="post-entry"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="https://kylejones200.github.io/48_hours/cover.jpg" alt="Helpful Travel Resources">
-</figure>
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Helpful Resources
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Travel is more fun when you have help</p>
-  </div>
-  <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Helpful Resources" href="https://kylejones200.github.io/48_hours/posts/helpful_resources/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Tulsa, OK" href="http://localhost:1313/48_hours/posts/tulsa_48/"></a>
 </article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
-                srcset='https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581_hu_a1985b1ee4a28bec.jpg 360w,https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581_hu_a51f73f3c0bbcbdd.jpg 480w,https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581_hu_78de504a4f4cc5be.jpg 720w,https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581_hu_6db5a599b27fc7d5.jpg 1080w,https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581_hu_de9e9acd55bf49c2.jpg 1500w,https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581.jpg 4080w'
-                src="https://kylejones200.github.io/48_hours/posts/sunlight/PXL_20250105_234006581.jpg"
+                srcset='http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581_hu_a1985b1ee4a28bec.jpg 360w,http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581_hu_a51f73f3c0bbcbdd.jpg 480w,http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581_hu_78de504a4f4cc5be.jpg 720w,http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581_hu_6db5a599b27fc7d5.jpg 1080w,http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581_hu_de9e9acd55bf49c2.jpg 1500w,http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581.jpg 4080w'
+                src="http://localhost:1313/48_hours/posts/sunlight/PXL_20250105_234006581.jpg"
                 sizes="(min-width: 768px) 720px, 100vw"
                 width="4080" height="3072"
                 alt="Skiing Sunlight Mountain, CO">
@@ -276,14 +1306,14 @@
     <p>A friendly, no‑frills ski day at Sunlight Mountain with easy logistics, sunset glow, local vibe, and hot‑springs après in Glenwood Springs.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-18 13:32:03 -0500 CDT'>August 18, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Skiing Sunlight Mountain, CO" href="https://kylejones200.github.io/48_hours/posts/sunlight/"></a>
+  <a class="entry-link" aria-label="post link to Skiing Sunlight Mountain, CO" href="http://localhost:1313/48_hours/posts/sunlight/"></a>
 </article>
 
 <article class="post-entry"> 
 <figure class="entry-cover">
             <img loading="lazy"
-                srcset='https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_3a69ae80011dd745.jpg 360w,https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_b2f73b4ede087446.jpg 480w,https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_19fbde042aedf896.jpg 720w,https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_f68df7f22b087111.jpg 1080w,https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_13274495f4025bcf.jpg 1500w,https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551.jpg 4080w'
-                src="https://kylejones200.github.io/48_hours/posts/atlanta_48/PXL_20250806_141418551.jpg"
+                srcset='http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_3a69ae80011dd745.jpg 360w,http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_b2f73b4ede087446.jpg 480w,http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_19fbde042aedf896.jpg 720w,http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_f68df7f22b087111.jpg 1080w,http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551_hu_13274495f4025bcf.jpg 1500w,http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551.jpg 4080w'
+                src="http://localhost:1313/48_hours/posts/atlanta_48/PXL_20250806_141418551.jpg"
                 sizes="(min-width: 768px) 720px, 100vw"
                 width="4080" height="3072"
                 alt="Everything in Georgia is Peaches">
@@ -296,11 +1326,11 @@
     <p>Barbecue, whale sharks, Olympic grounds, and a downtown stay.</p>
   </div>
   <footer class="entry-footer"><span title='2025-08-16 00:00:00 +0000 UTC'>August 16, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to 48 Hours in Atlanta" href="https://kylejones200.github.io/48_hours/posts/atlanta_48/"></a>
+  <a class="entry-link" aria-label="post link to 48 Hours in Atlanta" href="http://localhost:1313/48_hours/posts/atlanta_48/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
-    <a class="prev" href="https://kylejones200.github.io/48_hours/posts/">
+    <a class="prev" href="http://localhost:1313/48_hours/posts/">
       «&nbsp;Prev&nbsp;
     </a>
   </nav>
@@ -308,7 +1338,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2025 <a href="https://kylejones200.github.io/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
+        <span>&copy; 2025 <a href="http://localhost:1313/48_hours/">48 Hours – City Guides for Fast Trips</a></span> · 
 
     <span>
         Powered by

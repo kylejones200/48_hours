@@ -13,6 +13,26 @@ cover:
 
 Tulsa pairs oil-boom history with family parks, hearty food, and coffee roasted downtown. In two days you can stay in a boutique hotel, wander stacks of books, eat pizza and comfort food, and watch kids play in a world-class park.
 
+{{< city-map id="tulsa-map" city="Tulsa" lat="36.1540" lng="-95.9928" zoom="13" height="450px" >}}
+
+{{< map-location map="tulsa-map" type="hotel" name="Ambassador Hotel" lat="36.1539" lng="-95.9925" description="1929 art deco hotel built for oil executives" day="1" >}}
+
+{{< map-location map="tulsa-map" type="restaurant" name="The Brook" lat="36.1520" lng="-95.9910" description="Comfort food with burgers, fried chicken, and big portions" day="1" >}}
+
+{{< map-location map="tulsa-map" type="restaurant" name="Topeca Coffee Roasters" lat="36.1565" lng="-95.9890" description="Local coffee roastery with pour-overs and cappuccinos" day="2" >}}
+
+{{< map-location map="tulsa-map" type="attraction" name="Gardner's Used Books & Music" lat="36.1580" lng="-95.9920" description="Warehouse bookstore with novels, records, and rare finds" day="2" >}}
+
+{{< map-location map="tulsa-map" type="attraction" name="Gathering Place" lat="36.1615" lng="-95.9515" description="66-acre park along Arkansas River with climbing towers and gardens" day="2" >}}
+
+{{< map-location map="tulsa-map" type="restaurant" name="Andolini's Pizza" lat="36.1540" lng="-95.9900" description="New York-style pizza with chewy crusts and inventive toppings" day="2" >}}
+
+{{< map-location map="tulsa-map" type="attraction" name="Discovery Lab" lat="36.1620" lng="-95.9520" description="Kids' museum with hands-on science exhibits and climbing structures" day="3" >}}
+
+{{< map-route map="tulsa-map" day="1" color="#E91E63" >}}
+{{< map-route map="tulsa-map" day="2" color="#9C27B0" >}}
+{{< map-route map="tulsa-map" day="3" color="#FF9800" >}}
+
 ## Friday Evening – Arrival and Dinner at The Brook
 
 Check in at the **Ambassador Hotel**. Built in 1929 for oil executives, it holds art deco charm with modern comfort. After dropping bags, head to **The Brook** for dinner. The menu leans into comfort—burgers, fried chicken, sandwiches, and big portions. It sets a local tone: casual, filling, and easygoing.

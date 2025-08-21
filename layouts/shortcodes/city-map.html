@@ -1,0 +1,51 @@
+{{- $mapId := .Get "id" | default "city-map" -}}
+{{- $city := .Get "city" -}}
+{{- $lat := .Get "lat" -}}
+{{- $lng := .Get "lng" -}}
+{{- $zoom := .Get "zoom" | default "13" -}}
+{{- $height := .Get "height" | default "400px" -}}
+
+<div id="{{ $mapId }}" class="city-map" style="height: {{ $height }}; margin: 2rem 0; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize map
+  const map{{ $mapId | title }} = L.map('{{ $mapId }}').setView([{{ $lat }}, {{ $lng }}], {{ $zoom }});
+  
+  // Add tile layer
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 19
+  }).addTo(map{{ $mapId | title }});
+
+  // Custom icons
+  const hotelIcon = L.divIcon({
+    html: '<div class="map-marker hotel-marker">🏨</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  const restaurantIcon = L.divIcon({
+    html: '<div class="map-marker restaurant-marker">🍽️</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  const attractionIcon = L.divIcon({
+    html: '<div class="map-marker attraction-marker">📍</div>',
+    className: 'custom-div-icon',
+    iconSize: [30, 30],
+    iconAnchor: [15, 15]
+  });
+
+  // Store map reference globally for adding locations
+  window.cityMaps = window.cityMaps || {};
+  window.cityMaps['{{ $mapId }}'] = {
+    map: map{{ $mapId | title }},
+    icons: { hotel: hotelIcon, restaurant: restaurantIcon, attraction: attractionIcon },
+    routes: { day1: null, day2: null }
+  };
+});
+</script>

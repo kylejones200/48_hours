@@ -11,5 +11,3 @@ Welcome to **48 Hours**, a collection of city guides designed for travelers who 
 I write these guides from the ground. I stay in the hotels, eat in the restaurants, and visit the museums. The result is direct, practical advice.  
 
 This site is more than stories. It is a business built for travelers, tourism boards, and partners. Readers use these guides to book trips, plan weekends, and discover places worth their time.  
-
-Explore the [Cities](/cities/) section to start planning your next 48-hour trip.  

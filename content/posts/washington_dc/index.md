@@ -12,9 +12,26 @@ cover:
 ---
 
 
-Washington, DC is a city of museums, monuments, and green spaces built around the National Mall. With so many free Smithsonian museums and kid-friendly stops, two days can be full without costing much. Families will find hands-on exhibits, animals, and iconic landmarks at every turn.  
+Washington, DC is a city of museums, monuments, and green spaces built around the National Mall. With so many free Smithsonian museums and kid-friendly stops, two days can be full without costing much. Families will find hands-on exhibits, animals, and iconic landmarks at every turn.
 
+{{< city-map id="dc-map" city="Washington DC" lat="38.8951" lng="-77.0364" zoom="12" height="450px" >}}
 
+{{< map-location map="dc-map" type="attraction" name="National Museum of Natural History" lat="38.8913" lng="-77.0261" description="Smithsonian museum with Hope Diamond and Butterfly Pavilion" day="1" >}}
+
+{{< map-location map="dc-map" type="attraction" name="National Museum of American History" lat="38.8913" lng="-77.0300" description="Star-Spangled Banner and presidential artifacts with family workshops" day="1" >}}
+
+{{< map-location map="dc-map" type="attraction" name="National Air and Space Museum" lat="38.8882" lng="-77.0199" description="Rockets, Apollo 11, and flight simulators" day="1" >}}
+
+{{< map-location map="dc-map" type="attraction" name="Washington Monument" lat="38.8895" lng="-77.0353" description="Iconic obelisk on the National Mall" day="1" >}}
+
+{{< map-location map="dc-map" type="attraction" name="National Zoo" lat="38.9296" lng="-77.0500" description="Famous for giant pandas and diverse animal exhibits" day="2" >}}
+
+{{< map-location map="dc-map" type="attraction" name="Lincoln Memorial" lat="38.8893" lng="-77.0502" description="Memorial to Abraham Lincoln with reflecting pool" day="2" >}}
+
+{{< map-location map="dc-map" type="attraction" name="Capitol Building" lat="38.8899" lng="-77.0091" description="US Capitol with dome and legislative chambers" day="2" >}}
+
+{{< map-route map="dc-map" day="1" color="#E91E63" >}}
+{{< map-route map="dc-map" day="2" color="#9C27B0" >}}
 
 ## Where to Stay  
 Choose a hotel or Airbnb near the National Mall or a Metro stop. Central locations make it easy to walk to museums or hop on the Metro to reach the zoo and neighborhoods.  

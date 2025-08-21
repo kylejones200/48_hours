@@ -2,18 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Cities on 48 Hours – City Guides for Fast Trips</title>
-    <link>https://kylejones200.github.io/48_hours/categories/cities/</link>
+    <link>http://localhost:1313/48_hours/categories/cities/</link>
     <description>Recent content in Cities on 48 Hours – City Guides for Fast Trips</description>
     <generator>Hugo -- 0.148.2</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://kylejones200.github.io/48_hours/categories/cities/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/48_hours/categories/cities/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>48 Hours in Atlanta</title>
-      <link>https://kylejones200.github.io/48_hours/posts/atlanta_48/</link>
+      <link>http://localhost:1313/48_hours/posts/atlanta_48/</link>
       <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://kylejones200.github.io/48_hours/posts/atlanta_48/</guid>
+      <guid>http://localhost:1313/48_hours/posts/atlanta_48/</guid>
       <description>Barbecue, whale sharks, Olympic grounds, and a downtown stay.</description>
+    </item>
+    <item>
+      <title>48 Hours in museums</title>
+      <link>http://localhost:1313/48_hours/museums/</link>
+      <pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/48_hours/museums/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Rose Rock Museum (Noble, OK — closed)&lt;/strong&gt;
+Once dedicated to Oklahoma’s state rock, this museum displayed rose-shaped barite crystals formed 250 million years ago.
+&lt;em&gt;Practical info:&lt;/em&gt; Permanently closed. Shops in Noble still sell rose rocks — the best place for a keepsake.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rose Rock Museum (Noble, Oklahoma — closed)&lt;/strong&gt;
+Oklahoma’s state rock is a rose-shaped barite crystal. This small museum once explained their formation and displayed local finds.
+Though the museum has closed, you can still find rose rocks in shops around Noble — they make for a uniquely Oklahoman souvenir.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

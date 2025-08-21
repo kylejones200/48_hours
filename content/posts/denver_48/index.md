@@ -13,6 +13,19 @@ cover:
 
 Denver balances mountain air with art, history, and food. In two days you can stay in a landmark hotel, eat farm-to-table meals, and see two very different museums that both matter.
 
+{{< city-map id="denver-map" city="Denver" lat="39.7392" lng="-104.9903" zoom="13" height="450px" >}}
+
+{{< map-location map="denver-map" type="hotel" name="The Brown Palace" lat="39.7441" lng="-104.9880" description="Historic landmark hotel with Victorian atrium since 1892" day="1" >}}
+
+{{< map-location map="denver-map" type="attraction" name="Denver Art Museum" lat="39.7372" lng="-104.9894" description="Modern museum with Libeskind wing and diverse art collection" day="2" >}}
+
+{{< map-location map="denver-map" type="restaurant" name="Leven Deli" lat="39.7370" lng="-104.9890" description="Airy deli famous for thick-cut pastrami sandwiches" day="2" >}}
+
+{{< map-location map="denver-map" type="attraction" name="Kirkland Museum" lat="39.7363" lng="-104.9889" description="Decorative arts museum with unique collection" day="2" >}}
+
+{{< map-route map="denver-map" day="1" color="#E91E63" >}}
+{{< map-route map="denver-map" day="2" color="#9C27B0" >}}
+
 ## Where to Stay: The Brown Palace
 
 The Brown Palace has anchored downtown since 1892. Its triangular shape stands apart from modern towers. Inside, the atrium rises eight stories, with wrought-iron balconies and a stained glass skylight that floods the lobby with color. Walking in feels like stepping into another era. Staff still pour afternoon tea with fine china and harp music, a tradition that keeps the hotel’s Victorian spirit alive.

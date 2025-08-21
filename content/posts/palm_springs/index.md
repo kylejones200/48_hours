@@ -13,6 +13,23 @@ cover:
 
 Palm Springs mixes desert landscape with family-friendly attractions. In four days you can ride an aerial tramway into the mountains, visit museums and zoos, explore aviation history, and take a day trip to Joshua Tree National Park.
 
+{{< city-map id="palm-springs-map" city="Palm Springs" lat="33.8303" lng="-116.5453" zoom="11" height="450px" >}}
+
+{{< map-location map="palm-springs-map" type="attraction" name="Palm Springs Aerial Tramway" lat="33.8183" lng="-116.6308" description="Rotating tramcar climbing 8,500 feet up Mount San Jacinto" day="1" >}}
+
+{{< map-location map="palm-springs-map" type="attraction" name="Children's Discovery Museum" lat="33.8303" lng="-116.5453" description="Hands-on museum with interactive exhibits for kids" day="2" >}}
+
+{{< map-location map="palm-springs-map" type="attraction" name="Living Desert Zoo" lat="33.7239" lng="-116.3739" description="Desert zoo and botanical garden with native wildlife" day="2" >}}
+
+{{< map-location map="palm-springs-map" type="attraction" name="Palm Springs Air Museum" lat="33.8297" lng="-116.5064" description="Aviation history museum with vintage aircraft" day="3" >}}
+
+{{< map-location map="palm-springs-map" type="attraction" name="Joshua Tree National Park" lat="33.8734" lng="-115.9010" description="Desert national park with unique rock formations and Joshua trees" day="4" >}}
+
+{{< map-route map="palm-springs-map" day="1" color="#E91E63" >}}
+{{< map-route map="palm-springs-map" day="2" color="#9C27B0" >}}
+{{< map-route map="palm-springs-map" day="3" color="#FF9800" >}}
+{{< map-route map="palm-springs-map" day="4" color="#4CAF50" >}}
+
 ## Day 1: Arrival and the Aerial Tramway
 
 Arrive in Palm Springs and check into your hotel or rental. The desert heat is sharp, so start with the **Palm Springs Aerial Tramway**. The rotating tramcar climbs 8,500 feet up Mount San Jacinto. At the top, the air cools, and views stretch across the Coachella Valley. Trails loop through pine forest, and picnic areas give space to relax.

@@ -2,167 +2,197 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://kylejones200.github.io/48_hours/</loc>
+    <loc>http://localhost:1313/48_hours/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/washington_dc/</loc>
+    <loc>http://localhost:1313/48_hours/posts/washington_dc/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/48-hours/</loc>
+    <loc>http://localhost:1313/48_hours/categories/48-hours/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/</loc>
+    <loc>http://localhost:1313/48_hours/categories/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/</loc>
+    <loc>http://localhost:1313/48_hours/posts/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/</loc>
+    <loc>http://localhost:1313/48_hours/tags/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/washington-dc/</loc>
+    <loc>http://localhost:1313/48_hours/tags/washington-dc/</loc>
     <lastmod>2025-08-18T15:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/glen_rose/</loc>
+    <loc>http://localhost:1313/48_hours/posts/glen_rose/</loc>
     <lastmod>2025-08-18T14:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/glen-rose/</loc>
+    <loc>http://localhost:1313/48_hours/tags/glen-rose/</loc>
     <lastmod>2025-08-18T14:05:00-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/europe/scotland/</loc>
+    <loc>http://localhost:1313/48_hours/posts/europe/scotland/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/10-days/</loc>
+    <loc>http://localhost:1313/48_hours/categories/10-days/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/palm_springs/</loc>
+    <loc>http://localhost:1313/48_hours/posts/guthrie/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/austin_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/palm_springs/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/europe/bacharach/</loc>
+    <loc>http://localhost:1313/48_hours/posts/austin_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/bentonville_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/europe/bacharach/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/chicago_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/bentonville_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/denver_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/chicago_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/eureka_springs_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/dallas/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/europe/frankfurt/</loc>
+    <loc>http://localhost:1313/48_hours/posts/denver_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/houston_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/eureka_springs_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/europe/luxembourg/</loc>
+    <loc>http://localhost:1313/48_hours/posts/europe/frankfurt/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/memphis_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/houston_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/oklahoma_city_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/europe/luxembourg/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/europe/paris/</loc>
+    <loc>http://localhost:1313/48_hours/posts/memphis_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/tulsa_48/</loc>
+    <loc>http://localhost:1313/48_hours/posts/oklahoma_city_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/austin/</loc>
+    <loc>http://localhost:1313/48_hours/posts/europe/paris/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/bacharach/</loc>
+    <loc>http://localhost:1313/48_hours/posts/tulsa_48/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/bentonville/</loc>
+    <loc>http://localhost:1313/48_hours/resources/kids/travel_journal/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/chicago/</loc>
+    <loc>http://localhost:1313/48_hours/tags/austin/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/denver/</loc>
+    <loc>http://localhost:1313/48_hours/tags/bacharach/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/eureka-springs/</loc>
+    <loc>http://localhost:1313/48_hours/tags/bentonville/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/frankfurt/</loc>
+    <loc>http://localhost:1313/48_hours/tags/chicago/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/general/</loc>
+    <loc>http://localhost:1313/48_hours/tags/dallas/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/helpful_resources/</loc>
+    <loc>http://localhost:1313/48_hours/tags/denver/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/helpful-resources/</loc>
+    <loc>http://localhost:1313/48_hours/tags/eureka-springs/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/houston/</loc>
+    <loc>http://localhost:1313/48_hours/tags/frankfurt/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/luxembourg/</loc>
+    <loc>http://localhost:1313/48_hours/categories/general/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/memphis/</loc>
+    <loc>http://localhost:1313/48_hours/tags/guthrie/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/oklahoma-city/</loc>
+    <loc>http://localhost:1313/48_hours/categories/helpful-resources/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/palm-springs/</loc>
+    <loc>http://localhost:1313/48_hours/tags/houston/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/paris/</loc>
+    <loc>http://localhost:1313/48_hours/tags/luxembourg/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/scotland/</loc>
+    <loc>http://localhost:1313/48_hours/tags/memphis/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/sunlight/</loc>
+    <loc>http://localhost:1313/48_hours/tags/oklahoma-city/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/sunlight/</loc>
+    <loc>http://localhost:1313/48_hours/resources/kids/packing_lists/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/travel-journal/</loc>
+    <loc>http://localhost:1313/48_hours/tags/palm-springs/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/tulsa/</loc>
+    <loc>http://localhost:1313/48_hours/tags/paris/</loc>
     <lastmod>2025-08-18T13:32:03-05:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/cities/</loc>
+    <loc>http://localhost:1313/48_hours/tags/photos/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/tags/scotland/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/posts/sunlight/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/tags/sunlight/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/resources/photos/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/tags/travel-journal/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/tags/tulsa/</loc>
+    <lastmod>2025-08-18T13:32:03-05:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/cities/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/resources/</loc>
+    <loc>http://localhost:1313/48_hours/resources/packing_list/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/work/</loc>
+    <loc>http://localhost:1313/48_hours/resources/</loc>
     <lastmod>2025-08-18T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/posts/atlanta_48/</loc>
+    <loc>http://localhost:1313/48_hours/work/</loc>
+    <lastmod>2025-08-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/posts/atlanta_48/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/48-hours/</loc>
+    <loc>http://localhost:1313/48_hours/museums/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/tags/atlanta/</loc>
+    <loc>http://localhost:1313/48_hours/tags/48-hours/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/categories/cities/</loc>
+    <loc>http://localhost:1313/48_hours/tags/atlanta/</loc>
     <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/resources/packing_list/</loc>
+    <loc>http://localhost:1313/48_hours/categories/cities/</loc>
+    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://kylejones200.github.io/48_hours/about/</loc>
+    <loc>http://localhost:1313/48_hours/tags/museums/</loc>
+    <lastmod>2025-08-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/about/</loc>
+  </url><url>
+    <loc>http://localhost:1313/48_hours/search/</loc>
   </url>
 </urlset>

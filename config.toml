@@ -9,7 +9,7 @@ googleAnalytics = "G-0CX9KZPX6X"
 enableRobotsTXT = true
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 section = ["HTML", "RSS"]
 page = ["HTML"]
 
@@ -50,6 +50,10 @@ Content = "Short, sharp city guides. Eat well. See more. Move fast."
   url  = "/resources/"
   weight = 4
   [[menu.main]]
+  name = "Search"
+  url  = "/search/"
+  weight = 5
+  [[menu.main]]
   name = "Work With Me"
   url  = "/work/"
-  weight = 5
+  weight = 6

@@ -12,7 +12,18 @@ cover:
 ---
 
 
-Oklahoma City mixes modern energy with deep history. In two days you can stay in a historic landmark hotel and see the city’s biggest events in a state-of-the-art arena.
+Oklahoma City mixes modern energy with deep history. In two days you can stay in a historic landmark hotel and see the city's biggest events in a state-of-the-art arena.
+
+{{< city-map id="okc-map" city="Oklahoma City" lat="35.4676" lng="-97.5164" zoom="14" height="450px" >}}
+
+{{< map-location map="okc-map" type="hotel" name="The National Hotel" lat="35.4676" lng="-97.5164" description="Historic Art Deco hotel in former First National Bank building from 1931" day="1" >}}
+
+{{< map-location map="okc-map" type="attraction" name="Paycom Center" lat="35.4634" lng="-97.5151" description="Home of Oklahoma City Thunder, hosts NBA games and major concerts" day="2" >}}
+
+{{< map-location map="okc-map" type="attraction" name="Horseshoe Museum" lat="35.4700" lng="-97.5200" description="Niche museum celebrating horseshoe craft and folklore" day="2" >}}
+
+{{< map-route map="okc-map" day="1" color="#E91E63" >}}
+{{< map-route map="okc-map" day="2" color="#9C27B0" >}}
 
 ## Where to Stay: The National Hotel
 

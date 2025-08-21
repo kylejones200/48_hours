@@ -12,13 +12,23 @@ cover:
 ---
 
 
-Glen Rose calls itself the "Dinosaur Capital of Texas," and for good reason. Prehistoric tracks fill the riverbeds, life-sized dinosaur statues guard a roadside park, and a wildlife safari sprawls across the hills. Add in small-town charm, big limestone rocks, and local museums, and you have a weekend that’s both adventurous and easygoing.  
+Glen Rose calls itself the "Dinosaur Capital of Texas," and for good reason. Prehistoric tracks fill the riverbeds, life-sized dinosaur statues guard a roadside park, and a wildlife safari sprawls across the hills. Add in small-town charm, big limestone rocks, and local museums, and you have a weekend that's both adventurous and easygoing.
 
+{{< city-map id="glen-rose-map" city="Glen Rose" lat="32.2343" lng="-97.7531" zoom="13" height="450px" >}}
 
+{{< map-location map="glen-rose-map" type="hotel" name="Live Oak BnB" lat="32.2343" lng="-97.7531" description="Local bed and breakfast near the town square" day="1" >}}
+
+{{< map-location map="glen-rose-map" type="attraction" name="Dinosaur Valley State Park" lat="32.2464" lng="-97.8081" description="Real dinosaur tracks in limestone riverbed with hiking trails" day="1" >}}
+
+{{< map-location map="glen-rose-map" type="attraction" name="Fossil Rim Wildlife Center" lat="32.1839" lng="-97.9117" description="African safari experience with giraffes, zebras, and rhinos" day="2" >}}
+
+{{< map-location map="glen-rose-map" type="attraction" name="Dinosaur World" lat="32.2200" lng="-97.7800" description="Life-sized dinosaur statues and roadside park" day="2" >}}
+
+{{< map-route map="glen-rose-map" day="1" color="#E91E63" >}}
+{{< map-route map="glen-rose-map" day="2" color="#9C27B0" >}}
 
 ## Where to Stay  
 Base yourself at a local Airbnb or inn near the square. Our stay at **Live Oak BnB** put us within easy reach of parks, museums, and restaurants, while giving us a quiet space to recharge after busy days outdoors.  
-
 
 
 ## Day One: Tracks and Trails  

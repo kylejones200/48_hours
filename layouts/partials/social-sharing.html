@@ -1,0 +1,68 @@
+{{/* Social sharing buttons */}}
+{{- $title := .Title -}}
+{{- $url := .Permalink -}}
+{{- $summary := .Summary | default .Description -}}
+
+<div class="social-sharing">
+  <h4>Share This Guide</h4>
+  <div class="share-buttons">
+    <a href="https://twitter.com/intent/tweet?text={{ $title | urlquery }}&url={{ $url | urlquery }}" 
+       target="_blank" 
+       rel="noopener" 
+       class="share-btn twitter"
+       aria-label="Share on Twitter">
+      <span class="share-icon">🐦</span>
+      <span class="share-text">Twitter</span>
+    </a>
+    
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ $url | urlquery }}" 
+       target="_blank" 
+       rel="noopener" 
+       class="share-btn facebook"
+       aria-label="Share on Facebook">
+      <span class="share-icon">📘</span>
+      <span class="share-text">Facebook</span>
+    </a>
+    
+    <a href="https://www.pinterest.com/pin/create/button/?url={{ $url | urlquery }}&description={{ $summary | urlquery }}" 
+       target="_blank" 
+       rel="noopener" 
+       class="share-btn pinterest"
+       aria-label="Share on Pinterest">
+      <span class="share-icon">📌</span>
+      <span class="share-text">Pinterest</span>
+    </a>
+    
+    <a href="mailto:?subject={{ $title | urlquery }}&body=Check out this travel guide: {{ $url | urlquery }}" 
+       class="share-btn email"
+       aria-label="Share via Email">
+      <span class="share-icon">✉️</span>
+      <span class="share-text">Email</span>
+    </a>
+    
+    <button class="share-btn copy-link" 
+            onclick="copyToClipboard('{{ $url }}')"
+            aria-label="Copy link">
+      <span class="share-icon">🔗</span>
+      <span class="share-text">Copy Link</span>
+    </button>
+  </div>
+</div>
+
+<script>
+function copyToClipboard(url) {
+  navigator.clipboard.writeText(url).then(function() {
+    const button = event.target.closest('.copy-link');
+    const originalText = button.querySelector('.share-text').textContent;
+    button.querySelector('.share-text').textContent = 'Copied!';
+    button.querySelector('.share-icon').textContent = '✅';
+    
+    setTimeout(function() {
+      button.querySelector('.share-text').textContent = originalText;
+      button.querySelector('.share-icon').textContent = '🔗';
+    }, 2000);
+  }).catch(function(err) {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
