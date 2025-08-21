@@ -54,6 +54,5 @@ Essential tools, guides, and resources to help you plan better trips and make th
 - **Copies of documents** - Store digitally and separately
 - **Trust your instincts** - If something feels off, leave
 
----
 
 *Have a resource suggestion? [Contact me](/work/) and let me know what would be helpful for fellow travelers.*
